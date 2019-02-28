@@ -30,7 +30,7 @@ namespace SAPSoftwareDeploymentInstaller
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAPSoftwareDeploymentInstaller));
             this.installButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.sevenZipCheckBox = new System.Windows.Forms.CheckBox();
             this.cmdBuilderRichTextBox = new System.Windows.Forms.RichTextBox();
             this.installLogRichTextBox = new System.Windows.Forms.RichTextBox();
             this.iReport451CheckBox = new System.Windows.Forms.CheckBox();
@@ -54,30 +54,31 @@ namespace SAPSoftwareDeploymentInstaller
             this.installButton.UseVisualStyleBackColor = true;
             this.installButton.Click += new System.EventHandler(this.installButton_Click);
             // 
-            // checkBox1
+            // sevenZipCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(45, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "7zip";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.sevenZipCheckBox.AutoSize = true;
+            this.sevenZipCheckBox.Location = new System.Drawing.Point(108, 42);
+            this.sevenZipCheckBox.Name = "sevenZipCheckBox";
+            this.sevenZipCheckBox.Size = new System.Drawing.Size(45, 17);
+            this.sevenZipCheckBox.TabIndex = 1;
+            this.sevenZipCheckBox.Text = "7zip";
+            this.sevenZipCheckBox.UseVisualStyleBackColor = true;
+            this.sevenZipCheckBox.Visible = false;
             // 
             // cmdBuilderRichTextBox
             // 
             this.cmdBuilderRichTextBox.Location = new System.Drawing.Point(564, 12);
             this.cmdBuilderRichTextBox.Name = "cmdBuilderRichTextBox";
-            this.cmdBuilderRichTextBox.Size = new System.Drawing.Size(100, 52);
+            this.cmdBuilderRichTextBox.Size = new System.Drawing.Size(100, 11);
             this.cmdBuilderRichTextBox.TabIndex = 2;
             this.cmdBuilderRichTextBox.Text = "";
             this.cmdBuilderRichTextBox.Visible = false;
             // 
             // installLogRichTextBox
             // 
-            this.installLogRichTextBox.Location = new System.Drawing.Point(377, 93);
+            this.installLogRichTextBox.Location = new System.Drawing.Point(451, 93);
             this.installLogRichTextBox.Name = "installLogRichTextBox";
-            this.installLogRichTextBox.Size = new System.Drawing.Size(386, 247);
+            this.installLogRichTextBox.Size = new System.Drawing.Size(312, 247);
             this.installLogRichTextBox.TabIndex = 3;
             this.installLogRichTextBox.Text = "";
             // 
@@ -86,7 +87,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.iReport451CheckBox.AutoSize = true;
             this.iReport451CheckBox.Checked = true;
             this.iReport451CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.iReport451CheckBox.Location = new System.Drawing.Point(6, 42);
+            this.iReport451CheckBox.Location = new System.Drawing.Point(6, 19);
             this.iReport451CheckBox.Name = "iReport451CheckBox";
             this.iReport451CheckBox.Size = new System.Drawing.Size(87, 17);
             this.iReport451CheckBox.TabIndex = 4;
@@ -102,6 +103,10 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Program,
@@ -109,7 +114,8 @@ namespace SAPSoftwareDeploymentInstaller
             this.Installed});
             this.dataGridView1.Location = new System.Drawing.Point(12, 93);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(359, 247);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(433, 247);
             this.dataGridView1.TabIndex = 6;
             // 
             // Program
@@ -135,7 +141,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // selectProgramGroupBox
             // 
-            this.selectProgramGroupBox.Controls.Add(this.checkBox1);
+            this.selectProgramGroupBox.Controls.Add(this.sevenZipCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.iReport451CheckBox);
             this.selectProgramGroupBox.Location = new System.Drawing.Point(12, 346);
             this.selectProgramGroupBox.Name = "selectProgramGroupBox";
@@ -155,6 +161,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.Controls.Add(this.installLogRichTextBox);
             this.Controls.Add(this.cmdBuilderRichTextBox);
             this.Controls.Add(this.installButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SAPSoftwareDeploymentInstaller";
             this.Text = "SAP Software Deployment";
@@ -168,16 +175,16 @@ namespace SAPSoftwareDeploymentInstaller
         #endregion
 
         private System.Windows.Forms.Button installButton;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox sevenZipCheckBox;
         private System.Windows.Forms.RichTextBox cmdBuilderRichTextBox;
         private System.Windows.Forms.RichTextBox installLogRichTextBox;
         private System.Windows.Forms.CheckBox iReport451CheckBox;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox selectProgramGroupBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Program;
         private System.Windows.Forms.DataGridViewTextBoxColumn Downloaded;
         private System.Windows.Forms.DataGridViewTextBoxColumn Installed;
-        private System.Windows.Forms.GroupBox selectProgramGroupBox;
     }
 }
 

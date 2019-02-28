@@ -20,13 +20,33 @@ namespace SAPSoftwareDeploymentInstaller
             InitializeComponent();
         }
 
+        //global stuff
+
+
         private void installButton_Click(object sender, EventArgs e)
         {
+            //do not run is there is a run in progress
             if(progressBar.Value >0 && progressBar.Value < 100)
             {
                 MessageBox.Show("Process is running, please wait.");
                 return;
             }
+
+            //clear contents after each run
+            installLogRichTextBox.Clear();
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+
+            //looks at each checkbox and adds to the table if it is checked 
+            if (iReport451CheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("iReport 4.5.1", "working...", "working...");
+            }
+            if (sevenZipCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("7zip", "working...", "working...");
+            }
+
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
             System.IO.Directory.CreateDirectory(userDir);
@@ -65,7 +85,37 @@ namespace SAPSoftwareDeploymentInstaller
         }
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
             progressBar.Value = e.ProgressPercentage;
+
+            if (e.ProgressPercentage == 100)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
+                        row.Cells[1].Value = "complete!";
+                }
+
+                string startPath = userDir+@"/zip";
+                string zipPath = userDir + @"\iReport-4.5.1.zip";
+                string extractPath = @"C:\SAPSDI\Jaspersoft";
+                System.IO.Directory.CreateDirectory(extractPath);
+
+
+                try
+                {
+                    System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
+                }
+                catch
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
+                            row.Cells[2].Value = "complete!";
+                    }
+                }
+            }
         }
     }
 }
