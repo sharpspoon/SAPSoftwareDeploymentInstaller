@@ -279,39 +279,38 @@ namespace SAPSoftwareDeploymentInstaller
                 bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
                 if (sixtyFourBitOperatingSystem == true)
                 {
-                    string sevenZipFile = userDir + @"\7z1900-x64.exe";
+                    using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
+                    {
+                        using (TextWriter tw = new StreamWriter(fs))
+                        {
+                            tw.WriteLine(userDir+ @"\7z1900-x64.exe /S /D=""C:\Program Files\7-Zip""");
+                            tw.WriteLine("exit");
+                            //tw.WriteLine("pause");
+                        }
+                    }
+                    System.Diagnostics.Process.Start(installerFilePath);
                 }
                 else
                 {
-                    string sevenZipFile = userDir + @"\7z1900.exe";
-                }
-                
-                using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
-                {
-                    using (TextWriter tw = new StreamWriter(fs))
+                    using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
                     {
-                        tw.WriteLine(@""+installerFilePath);
-                        tw.WriteLine("exit");
+                        using (TextWriter tw = new StreamWriter(fs))
+                        {
+                            tw.WriteLine(userDir + @"\7z1900.exe /S /D=""C:\Program Files (x86)\7-Zip""");
+                            tw.WriteLine("exit");
+                            //tw.WriteLine("pause");
+                        }
                     }
                     System.Diagnostics.Process.Start(installerFilePath);
                 }
 
-                string startPath = userDir + @"/zip";
-                string zipPath = userDir + @"\Java.zip";
-                string extractPath = @"C:\Program Files (x86)";
-                System.IO.File.SetAttributes(extractPath, FileAttributes.Normal);
-                try
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
+                    if (row.Cells[0].Value.ToString() == "7zip")
+                        row.Cells[2].Value = "complete!";
                 }
-                catch
-                {
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
-                    {
-                        if (row.Cells[0].Value.ToString() == "7zip")
-                            row.Cells[2].Value = "complete!";
-                    }
-                }
+
+
             }
         }
     }
