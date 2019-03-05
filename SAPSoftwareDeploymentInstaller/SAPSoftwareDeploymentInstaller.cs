@@ -86,6 +86,7 @@ namespace SAPSoftwareDeploymentInstaller
                 string javaFile = @"C:\Program Files (x86)\Java\jre1.7.0_25\bin\java.exe";
                 if (!System.IO.File.Exists(javaFile))
                 {
+                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading jre1.7.0_25 ....");
                     using (WebClient wc = new WebClient())
                     {
                         wc.DownloadProgressChanged += wc2_DownloadProgressChanged;
