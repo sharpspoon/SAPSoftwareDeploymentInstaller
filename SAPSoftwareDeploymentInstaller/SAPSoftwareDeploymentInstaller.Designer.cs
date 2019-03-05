@@ -46,6 +46,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // installButton
             // 
+            this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.installButton.Location = new System.Drawing.Point(307, 346);
             this.installButton.Name = "installButton";
             this.installButton.Size = new System.Drawing.Size(138, 23);
@@ -57,7 +58,7 @@ namespace SAPSoftwareDeploymentInstaller
             // sevenZipCheckBox
             // 
             this.sevenZipCheckBox.AutoSize = true;
-            this.sevenZipCheckBox.Location = new System.Drawing.Point(108, 42);
+            this.sevenZipCheckBox.Location = new System.Drawing.Point(6, 42);
             this.sevenZipCheckBox.Name = "sevenZipCheckBox";
             this.sevenZipCheckBox.Size = new System.Drawing.Size(45, 17);
             this.sevenZipCheckBox.TabIndex = 1;
@@ -163,6 +164,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.Controls.Add(this.installButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "SAPSoftwareDeploymentInstaller";
             this.Text = "SAP Software Deployment";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
