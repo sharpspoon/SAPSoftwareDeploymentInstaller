@@ -26,14 +26,7 @@ namespace SAPSoftwareDeploymentInstaller
 
         private void installButton_Click(object sender, EventArgs e)
         {
-            //do not run is there is a run in progress
-            if(progressBar.Value >0 && progressBar.Value < 100)
-            {
-
-                MessageBox.Show("Process is running, please wait.");
-                return;
-            }
-
+            //disable the run abliity if running
             installButton.Enabled = false;
 
             //clear contents after each run
@@ -41,6 +34,19 @@ namespace SAPSoftwareDeploymentInstaller
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
 
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+            System.IO.Directory.CreateDirectory(userDir);
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Creating temp directory: " + userDir + " ...Done.");
+
+            //////////////////////////////////
+            //CHECK WHICH ITEMS ARE SELECTED//
+            //////////////////////////////////
+
+            /////////////////
+            //iReport 4.5.1//
+            /////////////////
             //looks at each checkbox and adds to the table if it is checked 
             if (iReport451CheckBox.Checked == true)
             {
@@ -52,18 +58,16 @@ namespace SAPSoftwareDeploymentInstaller
                     dataGridView1.Rows.Add("jre1.7.0_25", "working...", "working...");
                 }
             }
+
+            /////////////////
+            //7zip///////////
+            /////////////////
             if (sevenZipCheckBox.Checked == true)
             {
                 dataGridView1.Rows.Add("7zip", "working...", "working...");
             }
 
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            System.IO.Directory.CreateDirectory(userDir);
-            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Creating temp directory: " + userDir + " ...Done.");
-
-            string installerFilePath = userDir + @"\SAPSDI.cmd";
-
+            //begin download/install
             if (iReport451CheckBox.Checked == true)
             {
                 installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading iReport 4.5.1 ....");
@@ -94,6 +98,7 @@ namespace SAPSoftwareDeploymentInstaller
                     }
                 }
 
+                //string installerFilePath = userDir + @"\SAPSDI.cmd";
                 //using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
                 //{
                 //    using (TextWriter tw = new StreamWriter(fs))
@@ -112,6 +117,14 @@ namespace SAPSoftwareDeploymentInstaller
         {
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
+                    row.Cells[1].Value = progressBar.Value+@"%";
+            }
+
             progressBar.Value = e.ProgressPercentage;
 
             if (e.ProgressPercentage == 100)
@@ -158,6 +171,13 @@ namespace SAPSoftwareDeploymentInstaller
         {
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
+                    row.Cells[1].Value = progressBar.Value + @"%";
+            }
+
             progressBar.Value = e.ProgressPercentage;
 
             if (e.ProgressPercentage == 100)
