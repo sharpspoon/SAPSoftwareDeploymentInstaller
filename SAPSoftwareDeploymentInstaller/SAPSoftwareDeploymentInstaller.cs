@@ -29,6 +29,9 @@ namespace SAPSoftwareDeploymentInstaller
             //disable the run abliity if running
             installButton.Enabled = false;
 
+            //get os bit version
+            bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
+
             //clear contents after each run
             installLogRichTextBox.Clear();
             dataGridView1.Rows.Clear();
@@ -67,7 +70,13 @@ namespace SAPSoftwareDeploymentInstaller
                 dataGridView1.Rows.Add("7zip", "working...", "working...");
             }
 
-            //begin download/install
+            //////////////////////////////////
+            //BEGIN DOWNLOAD / INSTALLATION///
+            //////////////////////////////////
+
+            /////////////////
+            //iReport 4.5.1//
+            /////////////////
             if (iReport451CheckBox.Checked == true)
             {
                 installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading iReport 4.5.1 ....");
@@ -77,6 +86,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
+                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
                         new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/iReport-4.5.1.zip"),
                         // Param2 = Path to save
                         userDir + @"\iReport-4.5.1.zip"
@@ -87,10 +97,11 @@ namespace SAPSoftwareDeploymentInstaller
                 if (!System.IO.File.Exists(javaFile))
                 {
                     installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading jre1.7.0_25 ....");
-                    using (WebClient wc = new WebClient())
+                    using (WebClient wc2 = new WebClient())
                     {
-                        wc.DownloadProgressChanged += wc2_DownloadProgressChanged;
-                        wc.DownloadFileAsync(
+                        wc2.DownloadProgressChanged += wc2_DownloadProgressChanged;
+
+                        wc2.DownloadFileAsync(
                             // Param1 = Link of file
                             new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/Java.zip"),
                             // Param2 = Path to save
@@ -112,6 +123,45 @@ namespace SAPSoftwareDeploymentInstaller
                 //    System.Diagnostics.Process.Start(installerFilePath);
                 //}
             }
+
+            /////////////////
+            //7ZIP///////////
+            /////////////////
+            if (sevenZipCheckBox.Checked == true)
+            {
+                if (sixtyFourBitOperatingSystem == true)
+                {
+                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   7zip 1900 64-bit ....");
+
+                    using (WebClient wc3 = new WebClient())
+                    {
+                        wc3.DownloadProgressChanged += wc3_DownloadProgressChanged;
+                        wc3.DownloadFileAsync(
+                            // Param1 = Link of file
+                            //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/7z1900-x64.exe"),
+                            // Param2 = Path to save
+                            userDir + @"\7z1900-x64.exe"
+                        );
+                    }
+                }
+                else
+                {
+                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   7zip 1900 32-bit ....");
+
+                    using (WebClient wc = new WebClient())
+                    {
+                        wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                        wc.DownloadFileAsync(
+                            // Param1 = Link of file
+                            //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/7z1900.exe"),
+                            // Param2 = Path to save
+                            userDir + @"\7z1900.exe"
+                        );
+                    }
+                }
+            }
             //System.IO.Directory.Delete(userDir);
         }
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -123,10 +173,8 @@ namespace SAPSoftwareDeploymentInstaller
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
-                    row.Cells[1].Value = progressBar.Value+@"%";
+                    row.Cells[1].Value = e.ProgressPercentage + @"%";
             }
-
-            progressBar.Value = e.ProgressPercentage;
 
             if (e.ProgressPercentage == 100)
             {
@@ -168,20 +216,19 @@ namespace SAPSoftwareDeploymentInstaller
             }
         }
 
-        void wc2_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        void wc2_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e2)
         {
+            
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-
+            //MessageBox.Show(@""+e2.ProgressPercentage);
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
-                    row.Cells[1].Value = progressBar.Value + @"%";
+                    row.Cells[1].Value = e2.ProgressPercentage + @"%";
             }
 
-            progressBar.Value = e.ProgressPercentage;
-
-            if (e.ProgressPercentage == 100)
+            if (e2.ProgressPercentage == 100)
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
@@ -202,6 +249,66 @@ namespace SAPSoftwareDeploymentInstaller
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
                         if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
+                            row.Cells[2].Value = "complete!";
+                    }
+                }
+            }
+        }
+
+        void wc3_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e3)
+        {
+
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+            //MessageBox.Show(@""+e2.ProgressPercentage);
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "7zip")
+                    row.Cells[1].Value = e3.ProgressPercentage + @"%";
+            }
+
+            if (e3.ProgressPercentage == 100)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "7zip")
+                        row.Cells[1].Value = "complete!";
+                }
+
+                string installerFilePath = userDir + @"\7zip.cmd";
+                bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
+                if (sixtyFourBitOperatingSystem == true)
+                {
+                    string sevenZipFile = userDir + @"\7z1900-x64.exe";
+                }
+                else
+                {
+                    string sevenZipFile = userDir + @"\7z1900.exe";
+                }
+                
+                using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
+                {
+                    using (TextWriter tw = new StreamWriter(fs))
+                    {
+                        tw.WriteLine(@""+installerFilePath);
+                        tw.WriteLine("exit");
+                    }
+                    System.Diagnostics.Process.Start(installerFilePath);
+                }
+
+                string startPath = userDir + @"/zip";
+                string zipPath = userDir + @"\Java.zip";
+                string extractPath = @"C:\Program Files (x86)";
+                System.IO.File.SetAttributes(extractPath, FileAttributes.Normal);
+                try
+                {
+                    System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
+                }
+                catch
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.Cells[0].Value.ToString() == "7zip")
                             row.Cells[2].Value = "complete!";
                     }
                 }

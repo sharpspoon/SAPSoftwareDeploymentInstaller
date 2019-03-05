@@ -34,7 +34,6 @@ namespace SAPSoftwareDeploymentInstaller
             this.cmdBuilderRichTextBox = new System.Windows.Forms.RichTextBox();
             this.installLogRichTextBox = new System.Windows.Forms.RichTextBox();
             this.iReport451CheckBox = new System.Windows.Forms.CheckBox();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Program = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Downloaded = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +63,6 @@ namespace SAPSoftwareDeploymentInstaller
             this.sevenZipCheckBox.TabIndex = 1;
             this.sevenZipCheckBox.Text = "7zip";
             this.sevenZipCheckBox.UseVisualStyleBackColor = true;
-            this.sevenZipCheckBox.Visible = false;
             // 
             // cmdBuilderRichTextBox
             // 
@@ -86,21 +84,12 @@ namespace SAPSoftwareDeploymentInstaller
             // iReport451CheckBox
             // 
             this.iReport451CheckBox.AutoSize = true;
-            this.iReport451CheckBox.Checked = true;
-            this.iReport451CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.iReport451CheckBox.Location = new System.Drawing.Point(6, 19);
             this.iReport451CheckBox.Name = "iReport451CheckBox";
             this.iReport451CheckBox.Size = new System.Drawing.Size(87, 17);
             this.iReport451CheckBox.TabIndex = 4;
             this.iReport451CheckBox.Text = "iReport 4.5.1";
             this.iReport451CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // progressBar
-            // 
-            this.progressBar.Location = new System.Drawing.Point(307, 375);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(138, 23);
-            this.progressBar.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -153,12 +142,12 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // SAPSoftwareDeploymentInstaller
             // 
+            this.AcceptButton = this.installButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 457);
             this.Controls.Add(this.selectProgramGroupBox);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.installLogRichTextBox);
             this.Controls.Add(this.cmdBuilderRichTextBox);
             this.Controls.Add(this.installButton);
@@ -181,7 +170,6 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.RichTextBox cmdBuilderRichTextBox;
         private System.Windows.Forms.RichTextBox installLogRichTextBox;
         private System.Windows.Forms.CheckBox iReport451CheckBox;
-        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox selectProgramGroupBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Program;
