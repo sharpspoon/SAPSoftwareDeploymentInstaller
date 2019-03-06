@@ -42,9 +42,8 @@ namespace SAPSoftwareDeploymentInstaller
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sapLinkLabel = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.selectProgramGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -58,9 +57,9 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             this.installButton.BackColor = System.Drawing.Color.Honeydew;
             this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.installButton.Location = new System.Drawing.Point(699, 346);
+            this.installButton.Location = new System.Drawing.Point(218, 346);
             this.installButton.Name = "installButton";
-            this.installButton.Size = new System.Drawing.Size(64, 100);
+            this.installButton.Size = new System.Drawing.Size(64, 102);
             this.installButton.TabIndex = 0;
             this.installButton.Text = "Install SAP Package";
             this.installButton.UseVisualStyleBackColor = false;
@@ -78,7 +77,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // cmdBuilderRichTextBox
             // 
-            this.cmdBuilderRichTextBox.Location = new System.Drawing.Point(218, 435);
+            this.cmdBuilderRichTextBox.Location = new System.Drawing.Point(507, 388);
             this.cmdBuilderRichTextBox.Name = "cmdBuilderRichTextBox";
             this.cmdBuilderRichTextBox.Size = new System.Drawing.Size(100, 11);
             this.cmdBuilderRichTextBox.TabIndex = 2;
@@ -149,7 +148,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.selectProgramGroupBox.Controls.Add(this.iReport451CheckBox);
             this.selectProgramGroupBox.Location = new System.Drawing.Point(12, 346);
             this.selectProgramGroupBox.Name = "selectProgramGroupBox";
-            this.selectProgramGroupBox.Size = new System.Drawing.Size(200, 100);
+            this.selectProgramGroupBox.Size = new System.Drawing.Size(200, 102);
             this.selectProgramGroupBox.TabIndex = 7;
             this.selectProgramGroupBox.TabStop = false;
             this.selectProgramGroupBox.Text = "Select Program";
@@ -173,8 +172,7 @@ namespace SAPSoftwareDeploymentInstaller
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(775, 24);
@@ -189,20 +187,6 @@ namespace SAPSoftwareDeploymentInstaller
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
@@ -210,12 +194,26 @@ namespace SAPSoftwareDeploymentInstaller
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
+            // sapLinkLabel
+            // 
+            this.sapLinkLabel.AutoSize = true;
+            this.sapLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sapLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.sapLinkLabel.Location = new System.Drawing.Point(703, 432);
+            this.sapLinkLabel.Name = "sapLinkLabel";
+            this.sapLinkLabel.Size = new System.Drawing.Size(60, 16);
+            this.sapLinkLabel.TabIndex = 7;
+            this.sapLinkLabel.TabStop = true;
+            this.sapLinkLabel.Text = "sap.com";
+            this.sapLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.sapLinkLabel_LinkClicked);
+            // 
             // SAPSoftwareDeploymentInstaller
             // 
             this.AcceptButton = this.installButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 457);
+            this.Controls.Add(this.sapLinkLabel);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.selectProgramGroupBox);
             this.Controls.Add(this.cmdBuilderRichTextBox);
@@ -257,8 +255,7 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel sapLinkLabel;
     }
 }
 

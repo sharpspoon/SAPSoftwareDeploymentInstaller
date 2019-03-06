@@ -26,6 +26,13 @@ namespace SAPSoftwareDeploymentInstaller
 
         private void installButton_Click(object sender, EventArgs e)
         {
+            //check if any software is selected
+            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false)
+            {
+                MessageBox.Show("Please select a program from the list to the left.");
+                return;
+            }
+
             //disable the run abliity if running
             installButton.Enabled = false;
 
@@ -317,6 +324,11 @@ namespace SAPSoftwareDeploymentInstaller
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void sapLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://sap.com");
         }
     }
 }
