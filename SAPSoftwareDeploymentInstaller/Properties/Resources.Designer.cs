@@ -63,9 +63,39 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2019_02_19_14_29_50_Window {
+        internal static System.Drawing.Bitmap _7zip {
             get {
-                object obj = ResourceManager.GetObject("2019-02-19 14_29_50-Window", resourceCulture);
+                object obj = ResourceManager.GetObject("7zip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ireport {
+            get {
+                object obj = ResourceManager.GetObject("ireport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ireport1 {
+            get {
+                object obj = ResourceManager.GetObject("ireport1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap n__ {
+            get {
+                object obj = ResourceManager.GetObject("n++", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
