@@ -27,7 +27,7 @@ namespace SAPSoftwareDeploymentInstaller
         private void installButton_Click(object sender, EventArgs e)
         {
             //check if any software is selected
-            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false)
+            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false)
             {
                 MessageBox.Show("Please select a program from the list to the left.");
                 return;
@@ -77,6 +77,14 @@ namespace SAPSoftwareDeploymentInstaller
                 dataGridView1.Rows.Add("7zip", "working...", "working...");
             }
 
+            /////////////////
+            //N++////////////
+            /////////////////
+            if (nPlusPlusCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("N++", "working...", "working...");
+            }
+
             //////////////////////////////////
             //BEGIN DOWNLOAD / INSTALLATION///
             //////////////////////////////////
@@ -116,19 +124,6 @@ namespace SAPSoftwareDeploymentInstaller
                         );
                     }
                 }
-
-                //string installerFilePath = userDir + @"\SAPSDI.cmd";
-                //using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
-                //{
-                //    using (TextWriter tw = new StreamWriter(fs))
-                //    {
-                //        tw.WriteLine("taskkill /IM DataAnalysisTool.exe /F");
-                //        tw.WriteLine("cls");
-                //        tw.WriteLine(@"C:\Windows\System32\runas.exe /user:ACTEKSOFT\" + cmdBuilderRichTextBox.Text + @" /netonly " + @"""" + user + @"\DataAnalysisTool.exe""");
-                //        tw.WriteLine("exit");
-                //    }
-                //    System.Diagnostics.Process.Start(installerFilePath);
-                //}
             }
 
             /////////////////
@@ -138,7 +133,7 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (sixtyFourBitOperatingSystem == true)
                 {
-                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   7zip 1900 64-bit ....");
+                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading 7zip 64-bit ....");
 
                     using (WebClient wc3 = new WebClient())
                     {
@@ -154,17 +149,56 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 else
                 {
-                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   7zip 1900 32-bit ....");
+                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading 7zip 32-bit ....");
 
-                    using (WebClient wc = new WebClient())
+                    using (WebClient wc3 = new WebClient())
                     {
-                        wc.DownloadProgressChanged += wc_DownloadProgressChanged;
-                        wc.DownloadFileAsync(
+                        wc3.DownloadProgressChanged += wc_DownloadProgressChanged;
+                        wc3.DownloadFileAsync(
                             // Param1 = Link of file
                             //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
                             new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/7z1900.exe"),
                             // Param2 = Path to save
                             userDir + @"\7z1900.exe"
+                        );
+                    }
+                }
+            }
+
+            /////////////////
+            //N++////////////
+            /////////////////
+            if (nPlusPlusCheckBox.Checked == true)
+            {
+                if (sixtyFourBitOperatingSystem == true)
+                {
+                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading Notepad++ 64-bit ....");
+
+                    using (WebClient wc4 = new WebClient())
+                    {
+                        wc4.DownloadProgressChanged += wc4_DownloadProgressChanged;
+                        wc4.DownloadFileAsync(
+                            // Param1 = Link of file
+                            //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/npp.7.6.4.Installer.x64.exe"),
+                            // Param2 = Path to save
+                            userDir + @"\npp.7.6.4.Installer.x64.exe"
+                        );
+                    }
+                }
+                else
+                {
+                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading Notepad++ 32-bit ....");
+
+                    using (WebClient wc4 = new WebClient())
+                    {
+                        wc4.DownloadProgressChanged += wc4_DownloadProgressChanged;
+                        wc4.DownloadFileAsync(
+                            // Param1 = Link of file
+                            //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/npp.7.6.4.Installer.exe"),
+                            // Param2 = Path to save
+                            userDir + @"\npp.7.6.4.Installer.exe"
                         );
                     }
                 }
@@ -228,7 +262,6 @@ namespace SAPSoftwareDeploymentInstaller
             
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            //MessageBox.Show(@""+e2.ProgressPercentage);
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
@@ -267,7 +300,6 @@ namespace SAPSoftwareDeploymentInstaller
 
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            //MessageBox.Show(@""+e2.ProgressPercentage);
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "7zip")
@@ -292,7 +324,6 @@ namespace SAPSoftwareDeploymentInstaller
                         {
                             tw.WriteLine(userDir+ @"\7z1900-x64.exe /S /D=""C:\Program Files\7-Zip""");
                             tw.WriteLine("exit");
-                            //tw.WriteLine("pause");
                         }
                     }
                     System.Diagnostics.Process.Start(installerFilePath);
@@ -314,6 +345,62 @@ namespace SAPSoftwareDeploymentInstaller
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (row.Cells[0].Value.ToString() == "7zip")
+                        row.Cells[2].Value = "complete!";
+                }
+
+
+            }
+        }
+
+        void wc4_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e4)
+        {
+
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "N++")
+                    row.Cells[1].Value = e4.ProgressPercentage + @"%";
+            }
+
+            if (e4.ProgressPercentage == 100)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "N++")
+                        row.Cells[1].Value = "complete!";
+                }
+
+                string installerFilePath = userDir + @"\Npp.cmd";
+                bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
+                if (sixtyFourBitOperatingSystem == true)
+                {
+                    using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
+                    {
+                        using (TextWriter tw = new StreamWriter(fs))
+                        {
+                            tw.WriteLine(userDir + @"\npp.7.6.4.Installer.x64.exe /S");
+                            tw.WriteLine("exit");
+                        }
+                    }
+                    System.Diagnostics.Process.Start(installerFilePath);
+                }
+                else
+                {
+                    using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
+                    {
+                        using (TextWriter tw = new StreamWriter(fs))
+                        {
+                            tw.WriteLine(userDir + @"\npp.7.6.4.Installer.exe /S");
+                            tw.WriteLine("exit");
+                        }
+                    }
+                    System.Diagnostics.Process.Start(installerFilePath);
+                }
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "N++")
                         row.Cells[2].Value = "complete!";
                 }
 

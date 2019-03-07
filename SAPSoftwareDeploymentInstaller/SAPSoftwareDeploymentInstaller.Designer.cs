@@ -44,7 +44,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel = new System.Windows.Forms.LinkLabel();
             this.sevenZipCheckBox = new System.Windows.Forms.CheckBox();
             this.iReport451CheckBox = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.nPlusPlusCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.selectProgramGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -131,7 +131,7 @@ namespace SAPSoftwareDeploymentInstaller
             // selectProgramGroupBox
             // 
             this.selectProgramGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.selectProgramGroupBox.Controls.Add(this.checkBox1);
+            this.selectProgramGroupBox.Controls.Add(this.nPlusPlusCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.sevenZipCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.iReport451CheckBox);
             this.selectProgramGroupBox.Location = new System.Drawing.Point(16, 426);
@@ -234,19 +234,19 @@ namespace SAPSoftwareDeploymentInstaller
             this.iReport451CheckBox.Text = "     iReport 4.5.1";
             this.iReport451CheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // nPlusPlusCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.n__;
-            this.checkBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox1.Location = new System.Drawing.Point(8, 84);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(152, 24);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "     Notepad++";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.nPlusPlusCheckBox.AutoSize = true;
+            this.nPlusPlusCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nPlusPlusCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.n__;
+            this.nPlusPlusCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nPlusPlusCheckBox.Location = new System.Drawing.Point(8, 84);
+            this.nPlusPlusCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nPlusPlusCheckBox.Name = "nPlusPlusCheckBox";
+            this.nPlusPlusCheckBox.Size = new System.Drawing.Size(152, 24);
+            this.nPlusPlusCheckBox.TabIndex = 5;
+            this.nPlusPlusCheckBox.Text = "     Notepad++";
+            this.nPlusPlusCheckBox.UseVisualStyleBackColor = true;
             // 
             // SAPSoftwareDeploymentInstaller
             // 
@@ -297,7 +297,7 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.LinkLabel sapLinkLabel;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox nPlusPlusCheckBox;
     }
 }
 
