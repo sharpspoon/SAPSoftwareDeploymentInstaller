@@ -27,7 +27,7 @@ namespace SAPSoftwareDeploymentInstaller
         private void installButton_Click(object sender, EventArgs e)
         {
             //check if any software is selected
-            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false)
+            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false)
             {
                 MessageBox.Show("Please select a program from the list to the left.");
                 return;
@@ -85,6 +85,14 @@ namespace SAPSoftwareDeploymentInstaller
                 dataGridView1.Rows.Add("N++", "working...", "working...");
             }
 
+            /////////////////
+            //VIRTUALBOX/////
+            /////////////////
+            if (virtualBoxCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("VirtualBox", "working...", "working...");
+            }
+
             //////////////////////////////////
             //BEGIN DOWNLOAD / INSTALLATION///
             //////////////////////////////////
@@ -102,7 +110,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
                         //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/iReport-4.5.1.zip"),
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/ireport451/iReport-4.5.1.zip"),
                         // Param2 = Path to save
                         userDir + @"\iReport-4.5.1.zip"
                     );
@@ -118,7 +126,7 @@ namespace SAPSoftwareDeploymentInstaller
 
                         wc2.DownloadFileAsync(
                             // Param1 = Link of file
-                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/Java.zip"),
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/jre17025/Java.zip"),
                             // Param2 = Path to save
                             userDir + @"\Java.zip"
                         );
@@ -141,7 +149,7 @@ namespace SAPSoftwareDeploymentInstaller
                         wc3.DownloadFileAsync(
                             // Param1 = Link of file
                             //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/7z1900-x64.exe"),
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/7zip/7z1900-x64.exe"),
                             // Param2 = Path to save
                             userDir + @"\7z1900-x64.exe"
                         );
@@ -157,7 +165,7 @@ namespace SAPSoftwareDeploymentInstaller
                         wc3.DownloadFileAsync(
                             // Param1 = Link of file
                             //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/7z1900.exe"),
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/7zip/7z1900.exe"),
                             // Param2 = Path to save
                             userDir + @"\7z1900.exe"
                         );
@@ -180,7 +188,7 @@ namespace SAPSoftwareDeploymentInstaller
                         wc4.DownloadFileAsync(
                             // Param1 = Link of file
                             //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/npp.7.6.4.Installer.x64.exe"),
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/npp/npp.7.6.4.Installer.x64.exe"),
                             // Param2 = Path to save
                             userDir + @"\npp.7.6.4.Installer.x64.exe"
                         );
@@ -196,11 +204,43 @@ namespace SAPSoftwareDeploymentInstaller
                         wc4.DownloadFileAsync(
                             // Param1 = Link of file
                             //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/npp.7.6.4.Installer.exe"),
+                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/npp/npp.7.6.4.Installer.exe"),
                             // Param2 = Path to save
                             userDir + @"\npp.7.6.4.Installer.exe"
                         );
                     }
+                }
+            }
+
+            /////////////////
+            //VIRTUALBOX/////
+            /////////////////
+            if (virtualBoxCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading VirtualBox 64-bit ....");
+
+                using (WebClient wc5 = new WebClient())
+                {
+                    wc5.DownloadProgressChanged += wc5_DownloadProgressChanged;
+                    wc5.DownloadFileAsync(
+                        // Param1 = Link of file
+                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/virtualbox/VirtualBox-6.0.4-r128413-MultiArch_amd64.msi"),
+                        // Param2 = Path to save
+                        userDir + @"\VirtualBox-6.0.4-r128413-MultiArch_amd64.msi"
+                    );
+                }
+
+                using (WebClient wc5 = new WebClient())
+                {
+                    wc5.DownloadProgressChanged += wc5_DownloadProgressChanged;
+                    wc5.DownloadFileAsync(
+                        // Param1 = Link of file
+                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/virtualbox/common.cab"),
+                        // Param2 = Path to save
+                        userDir + @"\common.cab"
+                    );
                 }
             }
             //System.IO.Directory.Delete(userDir);
@@ -401,6 +441,47 @@ namespace SAPSoftwareDeploymentInstaller
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (row.Cells[0].Value.ToString() == "N++")
+                        row.Cells[2].Value = "complete!";
+                }
+
+
+            }
+        }
+
+        void wc5_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e5)
+        {
+
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "VirtualBox")
+                    row.Cells[1].Value = e5.ProgressPercentage + @"%";
+            }
+
+            if (e5.ProgressPercentage == 100)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "VirtualBox")
+                        row.Cells[1].Value = "complete!";
+                }
+
+                string installerFilePath = userDir + @"\VirtualBox.cmd";
+
+                using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
+                {
+                    using (TextWriter tw = new StreamWriter(fs))
+                    {
+                        tw.WriteLine(@"msiexec /i "+userDir + @"\VirtualBox-6.0.4-r128413-MultiArch_amd64.msi /quiet /qn /norestart ALLUSERS=2");
+                        tw.WriteLine("exit");
+                    }
+                }
+                System.Diagnostics.Process.Start(installerFilePath);
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "VirtualBox")
                         row.Cells[2].Value = "complete!";
                 }
 

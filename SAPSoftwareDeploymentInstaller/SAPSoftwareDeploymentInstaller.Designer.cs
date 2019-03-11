@@ -42,9 +42,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sapLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.virtualBoxCheckBox = new System.Windows.Forms.CheckBox();
+            this.nPlusPlusCheckBox = new System.Windows.Forms.CheckBox();
             this.sevenZipCheckBox = new System.Windows.Forms.CheckBox();
             this.iReport451CheckBox = new System.Windows.Forms.CheckBox();
-            this.nPlusPlusCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.selectProgramGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -59,7 +60,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.installButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.installButton.BackColor = System.Drawing.Color.Honeydew;
             this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.installButton.Location = new System.Drawing.Point(291, 426);
+            this.installButton.Location = new System.Drawing.Point(291, 596);
             this.installButton.Margin = new System.Windows.Forms.Padding(4);
             this.installButton.Name = "installButton";
             this.installButton.Size = new System.Drawing.Size(85, 126);
@@ -84,7 +85,8 @@ namespace SAPSoftwareDeploymentInstaller
             this.installLogRichTextBox.Location = new System.Drawing.Point(0, 0);
             this.installLogRichTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.installLogRichTextBox.Name = "installLogRichTextBox";
-            this.installLogRichTextBox.Size = new System.Drawing.Size(542, 385);
+            this.installLogRichTextBox.ReadOnly = true;
+            this.installLogRichTextBox.Size = new System.Drawing.Size(543, 467);
             this.installLogRichTextBox.TabIndex = 3;
             this.installLogRichTextBox.Text = "";
             // 
@@ -104,7 +106,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(454, 385);
+            this.dataGridView1.Size = new System.Drawing.Size(453, 467);
             this.dataGridView1.TabIndex = 6;
             // 
             // Program
@@ -131,14 +133,15 @@ namespace SAPSoftwareDeploymentInstaller
             // selectProgramGroupBox
             // 
             this.selectProgramGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.selectProgramGroupBox.Controls.Add(this.virtualBoxCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.nPlusPlusCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.sevenZipCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.iReport451CheckBox);
-            this.selectProgramGroupBox.Location = new System.Drawing.Point(16, 426);
+            this.selectProgramGroupBox.Location = new System.Drawing.Point(16, 508);
             this.selectProgramGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.selectProgramGroupBox.Name = "selectProgramGroupBox";
             this.selectProgramGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.selectProgramGroupBox.Size = new System.Drawing.Size(267, 126);
+            this.selectProgramGroupBox.Size = new System.Drawing.Size(267, 214);
             this.selectProgramGroupBox.TabIndex = 7;
             this.selectProgramGroupBox.TabStop = false;
             this.selectProgramGroupBox.Text = "Select Program";
@@ -159,8 +162,8 @@ namespace SAPSoftwareDeploymentInstaller
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.installLogRichTextBox);
-            this.splitContainer1.Size = new System.Drawing.Size(1001, 385);
-            this.splitContainer1.SplitterDistance = 454;
+            this.splitContainer1.Size = new System.Drawing.Size(1001, 467);
+            this.splitContainer1.SplitterDistance = 453;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -197,7 +200,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel.AutoSize = true;
             this.sapLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sapLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.sapLinkLabel.Location = new System.Drawing.Point(937, 532);
+            this.sapLinkLabel.Location = new System.Drawing.Point(937, 702);
             this.sapLinkLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sapLinkLabel.Name = "sapLinkLabel";
             this.sapLinkLabel.Size = new System.Drawing.Size(72, 20);
@@ -205,6 +208,34 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel.TabStop = true;
             this.sapLinkLabel.Text = "sap.com";
             this.sapLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.sapLinkLabel_LinkClicked);
+            // 
+            // virtualBoxCheckBox
+            // 
+            this.virtualBoxCheckBox.AutoSize = true;
+            this.virtualBoxCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.virtualBoxCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.virtualbox;
+            this.virtualBoxCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.virtualBoxCheckBox.Location = new System.Drawing.Point(8, 116);
+            this.virtualBoxCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.virtualBoxCheckBox.Name = "virtualBoxCheckBox";
+            this.virtualBoxCheckBox.Size = new System.Drawing.Size(148, 24);
+            this.virtualBoxCheckBox.TabIndex = 6;
+            this.virtualBoxCheckBox.Text = "     VirtualBox";
+            this.virtualBoxCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // nPlusPlusCheckBox
+            // 
+            this.nPlusPlusCheckBox.AutoSize = true;
+            this.nPlusPlusCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nPlusPlusCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.n__;
+            this.nPlusPlusCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nPlusPlusCheckBox.Location = new System.Drawing.Point(8, 84);
+            this.nPlusPlusCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nPlusPlusCheckBox.Name = "nPlusPlusCheckBox";
+            this.nPlusPlusCheckBox.Size = new System.Drawing.Size(152, 24);
+            this.nPlusPlusCheckBox.TabIndex = 5;
+            this.nPlusPlusCheckBox.Text = "     Notepad++";
+            this.nPlusPlusCheckBox.UseVisualStyleBackColor = true;
             // 
             // sevenZipCheckBox
             // 
@@ -234,26 +265,12 @@ namespace SAPSoftwareDeploymentInstaller
             this.iReport451CheckBox.Text = "     iReport 4.5.1";
             this.iReport451CheckBox.UseVisualStyleBackColor = true;
             // 
-            // nPlusPlusCheckBox
-            // 
-            this.nPlusPlusCheckBox.AutoSize = true;
-            this.nPlusPlusCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nPlusPlusCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.n__;
-            this.nPlusPlusCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.nPlusPlusCheckBox.Location = new System.Drawing.Point(8, 84);
-            this.nPlusPlusCheckBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nPlusPlusCheckBox.Name = "nPlusPlusCheckBox";
-            this.nPlusPlusCheckBox.Size = new System.Drawing.Size(152, 24);
-            this.nPlusPlusCheckBox.TabIndex = 5;
-            this.nPlusPlusCheckBox.Text = "     Notepad++";
-            this.nPlusPlusCheckBox.UseVisualStyleBackColor = true;
-            // 
             // SAPSoftwareDeploymentInstaller
             // 
             this.AcceptButton = this.installButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 562);
+            this.ClientSize = new System.Drawing.Size(1033, 732);
             this.Controls.Add(this.sapLinkLabel);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.selectProgramGroupBox);
@@ -298,6 +315,7 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.LinkLabel sapLinkLabel;
         private System.Windows.Forms.CheckBox nPlusPlusCheckBox;
+        private System.Windows.Forms.CheckBox virtualBoxCheckBox;
     }
 }
 
