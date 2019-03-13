@@ -197,5 +197,8 @@
   <ItemGroup>
     <None Include="Resources\ezgif.com-resize.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenshot.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

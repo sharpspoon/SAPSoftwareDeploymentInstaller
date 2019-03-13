@@ -113,6 +113,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap greenshot {
+            get {
+                object obj = ResourceManager.GetObject("greenshot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ireport {
             get {
                 object obj = ResourceManager.GetObject("ireport", resourceCulture);

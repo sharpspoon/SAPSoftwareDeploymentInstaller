@@ -43,6 +43,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel = new System.Windows.Forms.LinkLabel();
             this.installButton = new System.Windows.Forms.Button();
             this.loadingPictureBox = new System.Windows.Forms.PictureBox();
+            this.greenshotCheckBox = new System.Windows.Forms.CheckBox();
             this.jaspersoftStudioCheckBox = new System.Windows.Forms.CheckBox();
             this.virtualBoxCheckBox = new System.Windows.Forms.CheckBox();
             this.nPlusPlusCheckBox = new System.Windows.Forms.CheckBox();
@@ -74,7 +75,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.installLogRichTextBox.Location = new System.Drawing.Point(0, 0);
             this.installLogRichTextBox.Name = "installLogRichTextBox";
             this.installLogRichTextBox.ReadOnly = true;
-            this.installLogRichTextBox.Size = new System.Drawing.Size(435, 374);
+            this.installLogRichTextBox.Size = new System.Drawing.Size(435, 379);
             this.installLogRichTextBox.TabIndex = 3;
             this.installLogRichTextBox.Text = "";
             // 
@@ -94,7 +95,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 374);
+            this.dataGridView1.Size = new System.Drawing.Size(362, 379);
             this.dataGridView1.TabIndex = 6;
             // 
             // Program
@@ -121,14 +122,15 @@ namespace SAPSoftwareDeploymentInstaller
             // selectProgramGroupBox
             // 
             this.selectProgramGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.selectProgramGroupBox.Controls.Add(this.greenshotCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.jaspersoftStudioCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.virtualBoxCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.nPlusPlusCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.sevenZipCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.iReport451CheckBox);
-            this.selectProgramGroupBox.Location = new System.Drawing.Point(13, 406);
+            this.selectProgramGroupBox.Location = new System.Drawing.Point(13, 411);
             this.selectProgramGroupBox.Name = "selectProgramGroupBox";
-            this.selectProgramGroupBox.Size = new System.Drawing.Size(214, 171);
+            this.selectProgramGroupBox.Size = new System.Drawing.Size(214, 208);
             this.selectProgramGroupBox.TabIndex = 7;
             this.selectProgramGroupBox.TabStop = false;
             this.selectProgramGroupBox.Text = "Select Program";
@@ -148,7 +150,7 @@ namespace SAPSoftwareDeploymentInstaller
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.installLogRichTextBox);
-            this.splitContainer1.Size = new System.Drawing.Size(801, 374);
+            this.splitContainer1.Size = new System.Drawing.Size(801, 379);
             this.splitContainer1.SplitterDistance = 362;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -184,7 +186,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel.AutoSize = true;
             this.sapLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sapLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.sapLinkLabel.Location = new System.Drawing.Point(750, 562);
+            this.sapLinkLabel.Location = new System.Drawing.Point(750, 604);
             this.sapLinkLabel.Name = "sapLinkLabel";
             this.sapLinkLabel.Size = new System.Drawing.Size(60, 16);
             this.sapLinkLabel.TabIndex = 7;
@@ -199,7 +201,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.installButton.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.Download;
             this.installButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.installButton.Location = new System.Drawing.Point(233, 487);
+            this.installButton.Location = new System.Drawing.Point(233, 529);
             this.installButton.Name = "installButton";
             this.installButton.Size = new System.Drawing.Size(68, 91);
             this.installButton.TabIndex = 0;
@@ -214,12 +216,26 @@ namespace SAPSoftwareDeploymentInstaller
             // loadingPictureBox
             // 
             this.loadingPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.ezgif_com_resize;
-            this.loadingPictureBox.Location = new System.Drawing.Point(233, 413);
+            this.loadingPictureBox.Location = new System.Drawing.Point(233, 455);
             this.loadingPictureBox.Name = "loadingPictureBox";
             this.loadingPictureBox.Size = new System.Drawing.Size(68, 68);
             this.loadingPictureBox.TabIndex = 10;
             this.loadingPictureBox.TabStop = false;
             this.loadingPictureBox.Visible = false;
+            // 
+            // greenshotCheckBox
+            // 
+            this.greenshotCheckBox.AutoSize = true;
+            this.greenshotCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.greenshotCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.greenshotCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.greenshot;
+            this.greenshotCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.greenshotCheckBox.Location = new System.Drawing.Point(6, 148);
+            this.greenshotCheckBox.Name = "greenshotCheckBox";
+            this.greenshotCheckBox.Size = new System.Drawing.Size(115, 24);
+            this.greenshotCheckBox.TabIndex = 8;
+            this.greenshotCheckBox.Text = "     Greenshot";
+            this.greenshotCheckBox.UseVisualStyleBackColor = true;
             // 
             // jaspersoftStudioCheckBox
             // 
@@ -296,7 +312,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.AcceptButton = this.installButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(826, 586);
+            this.ClientSize = new System.Drawing.Size(826, 628);
             this.Controls.Add(this.loadingPictureBox);
             this.Controls.Add(this.sapLinkLabel);
             this.Controls.Add(this.splitContainer1);
@@ -346,6 +362,7 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.CheckBox virtualBoxCheckBox;
         private System.Windows.Forms.CheckBox jaspersoftStudioCheckBox;
         private System.Windows.Forms.PictureBox loadingPictureBox;
+        private System.Windows.Forms.CheckBox greenshotCheckBox;
     }
 }
 
