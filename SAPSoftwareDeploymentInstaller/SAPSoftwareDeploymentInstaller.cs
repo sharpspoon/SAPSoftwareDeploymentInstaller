@@ -1,5 +1,6 @@
 using IWshRuntimeLibrary;
 using Microsoft.WindowsAzure.Storage;
+using SAPSoftwareDeploymentInstaller.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,14 +28,17 @@ namespace SAPSoftwareDeploymentInstaller
         private void installButton_Click(object sender, EventArgs e)
         {
             //check if any software is selected
-            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false)
+            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false && jaspersoftStudioCheckBox.Checked == false)
             {
-                MessageBox.Show("Please select a program from the list to the left.");
+                MessageBox.Show("Must select at least one program to install.", "SAP Software Deployment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             //disable the run abliity if running
             installButton.Enabled = false;
+
+            //show loading gif
+            loadingPictureBox.Visible = true;
 
             //get os bit version
             bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
@@ -50,9 +54,9 @@ namespace SAPSoftwareDeploymentInstaller
             System.IO.Directory.CreateDirectory(userDir);
             installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Creating temp directory: " + userDir + " ...Done.");
 
-            //////////////////////////////////
-            //CHECK WHICH ITEMS ARE SELECTED//
-            //////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////
+            //CHECK WHICH ITEMS ARE SELECTED AND THEN ADD THEM TO THE DATAGRIDVIEW//
+            ////////////////////////////////////////////////////////////////////////
 
             /////////////////
             //iReport 4.5.1//
@@ -91,6 +95,14 @@ namespace SAPSoftwareDeploymentInstaller
             if (virtualBoxCheckBox.Checked == true)
             {
                 dataGridView1.Rows.Add("VirtualBox", "working...", "working...");
+            }
+
+            /////////////////
+            //JASPERSOFT/////
+            /////////////////
+            if (jaspersoftStudioCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Jaspersoft Studio", "working...", "working...");
             }
 
             //////////////////////////////////
@@ -243,6 +255,26 @@ namespace SAPSoftwareDeploymentInstaller
                     );
                 }
             }
+
+            /////////////////
+            //JASPERSOFT/////
+            /////////////////
+            if (jaspersoftStudioCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading Jaspersoft Studio ....");
+
+                using (WebClient wc6 = new WebClient())
+                {
+                    wc6.DownloadProgressChanged += wc6_DownloadProgressChanged;
+                    wc6.DownloadFileAsync(
+                        // Param1 = Link of file
+                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/jaspersoftstudio/TIB_js-studiocomm_6.6.0_windows_x86_64.exe"),
+                        // Param2 = Path to save
+                        userDir + @"\TIB_js-studiocomm_6.6.0_windows_x86_64.exe"
+                    );
+                }
+            }
             //System.IO.Directory.Delete(userDir);
         }
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -263,6 +295,14 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
                         row.Cells[1].Value = "complete!";
+                    if (row.Cells[1].Value.ToString() != "complete!")
+                    {
+                        loadingPictureBox.Visible = true;
+                    }
+                    else
+                    {
+                        loadingPictureBox.Visible = false;
+                    }
                 }
 
                 string startPath = userDir+@"/zip";
@@ -314,6 +354,14 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
                         row.Cells[1].Value = "complete!";
+                    if (row.Cells[1].Value.ToString() != "complete!")
+                    {
+                        loadingPictureBox.Visible = true;
+                    }
+                    else
+                    {
+                        loadingPictureBox.Visible = false;
+                    }
                 }
 
                 string startPath = userDir + @"/zip";
@@ -352,6 +400,14 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     if (row.Cells[0].Value.ToString() == "7zip")
                         row.Cells[1].Value = "complete!";
+                    if (row.Cells[1].Value.ToString() != "complete!")
+                    {
+                        loadingPictureBox.Visible = true;
+                    }
+                    else
+                    {
+                        loadingPictureBox.Visible = false;
+                    }
                 }
 
                 string installerFilePath = userDir + @"\7zip.cmd";
@@ -409,6 +465,14 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     if (row.Cells[0].Value.ToString() == "N++")
                         row.Cells[1].Value = "complete!";
+                    if (row.Cells[1].Value.ToString() != "complete!")
+                    {
+                        loadingPictureBox.Visible = true;
+                    }
+                    else
+                    {
+                        loadingPictureBox.Visible = false;
+                    }
                 }
 
                 string installerFilePath = userDir + @"\Npp.cmd";
@@ -465,6 +529,14 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     if (row.Cells[0].Value.ToString() == "VirtualBox")
                         row.Cells[1].Value = "complete!";
+                    if (row.Cells[1].Value.ToString() != "complete!")
+                    {
+                        loadingPictureBox.Visible = true;
+                    }
+                    else
+                    {
+                        loadingPictureBox.Visible = false;
+                    }
                 }
 
                 string installerFilePath = userDir + @"\VirtualBox.cmd";
@@ -484,6 +556,53 @@ namespace SAPSoftwareDeploymentInstaller
                     if (row.Cells[0].Value.ToString() == "VirtualBox")
                         row.Cells[2].Value = "complete!";
                 }
+            }
+        }
+
+        void wc6_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e6)
+        {
+
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "Jaspersoft Studio")
+                    row.Cells[1].Value = e6.ProgressPercentage + @"%";
+            }
+
+            if (e6.ProgressPercentage == 100)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "Jaspersoft Studio")
+                        row.Cells[1].Value = "complete!";
+                    if (row.Cells[1].Value.ToString() != "complete!")
+                    {
+                        loadingPictureBox.Visible = true;
+                    }
+                    else
+                    {
+                        loadingPictureBox.Visible = false;
+                    }
+                }
+
+                string installerFilePath = userDir + @"\JaspersoftStudio.cmd";
+
+                using (FileStream fs = new FileStream(installerFilePath, FileMode.OpenOrCreate))
+                {
+                    using (TextWriter tw = new StreamWriter(fs))
+                    {
+                        tw.WriteLine(userDir + @"\TIB_js-studiocomm_6.6.0_windows_x86_64.exe /S /D=""C:\Program Files\Jaspersoft""");
+                        tw.WriteLine("exit");
+                    }
+                }
+                System.Diagnostics.Process.Start(installerFilePath);
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() == "Jaspersoft Studio")
+                        row.Cells[2].Value = "complete!";
+                }
 
 
             }
@@ -497,6 +616,42 @@ namespace SAPSoftwareDeploymentInstaller
         private void sapLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://sap.com");
+        }
+
+        private void SAPSoftwareDeploymentInstaller_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Do you really want to exit?", "SAP Software Deployment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void installButton_Enter(object sender, EventArgs e)
+        {
+            MessageBox.Show("hey");
+        }
+
+        private void installButton_MouseEnter(object sender, EventArgs e)
+        {
+            this.installButton.Image = Resources.Downloadcolor;
+        }
+
+        private void installButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.installButton.Image = Resources.Download;
+        }
+
+        private void installButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.installButton.Image = Resources.Downloadfilled;
         }
     }
 }
