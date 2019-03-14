@@ -43,12 +43,14 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel = new System.Windows.Forms.LinkLabel();
             this.installButton = new System.Windows.Forms.Button();
             this.loadingPictureBox = new System.Windows.Forms.PictureBox();
+            this.filezillaCheckBox = new System.Windows.Forms.CheckBox();
             this.greenshotCheckBox = new System.Windows.Forms.CheckBox();
             this.jaspersoftStudioCheckBox = new System.Windows.Forms.CheckBox();
             this.virtualBoxCheckBox = new System.Windows.Forms.CheckBox();
             this.nPlusPlusCheckBox = new System.Windows.Forms.CheckBox();
             this.sevenZipCheckBox = new System.Windows.Forms.CheckBox();
             this.iReport451CheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.selectProgramGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -122,6 +124,7 @@ namespace SAPSoftwareDeploymentInstaller
             // selectProgramGroupBox
             // 
             this.selectProgramGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.selectProgramGroupBox.Controls.Add(this.filezillaCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.greenshotCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.jaspersoftStudioCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.virtualBoxCheckBox);
@@ -223,6 +226,20 @@ namespace SAPSoftwareDeploymentInstaller
             this.loadingPictureBox.TabStop = false;
             this.loadingPictureBox.Visible = false;
             // 
+            // filezillaCheckBox
+            // 
+            this.filezillaCheckBox.AutoSize = true;
+            this.filezillaCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filezillaCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filezillaCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.filezilla;
+            this.filezillaCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.filezillaCheckBox.Location = new System.Drawing.Point(6, 178);
+            this.filezillaCheckBox.Name = "filezillaCheckBox";
+            this.filezillaCheckBox.Size = new System.Drawing.Size(100, 24);
+            this.filezillaCheckBox.TabIndex = 9;
+            this.filezillaCheckBox.Text = "     FileZilla";
+            this.filezillaCheckBox.UseVisualStyleBackColor = true;
+            // 
             // greenshotCheckBox
             // 
             this.greenshotCheckBox.AutoSize = true;
@@ -307,12 +324,23 @@ namespace SAPSoftwareDeploymentInstaller
             this.iReport451CheckBox.Text = "     iReport 4.5.1";
             this.iReport451CheckBox.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(463, 479);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SAPSoftwareDeploymentInstaller
             // 
             this.AcceptButton = this.installButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(826, 628);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.loadingPictureBox);
             this.Controls.Add(this.sapLinkLabel);
             this.Controls.Add(this.splitContainer1);
@@ -322,7 +350,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SAPSoftwareDeploymentInstaller";
             this.Text = "SAP Software Deployment";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SAPSoftwareDeploymentInstaller_FormClosing);
@@ -363,6 +391,8 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.CheckBox jaspersoftStudioCheckBox;
         private System.Windows.Forms.PictureBox loadingPictureBox;
         private System.Windows.Forms.CheckBox greenshotCheckBox;
+        private System.Windows.Forms.CheckBox filezillaCheckBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 
