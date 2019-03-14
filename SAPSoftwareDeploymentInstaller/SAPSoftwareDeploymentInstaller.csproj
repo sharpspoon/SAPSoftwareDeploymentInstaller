@@ -206,5 +206,17 @@
   <ItemGroup>
     <None Include="Resources\filezilla.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modern-Background-02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluewhite-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spots-rainbow-background-light-colour-photo-rainbow-background-9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

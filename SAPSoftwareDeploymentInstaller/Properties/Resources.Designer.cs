@@ -63,6 +63,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bluewhite_background {
+            get {
+                object obj = ResourceManager.GetObject("bluewhite-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Download {
             get {
                 object obj = ResourceManager.GetObject("Download", resourceCulture);
@@ -163,6 +173,17 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap light_color_background_images_for_website_top_hd_images_for_free_background_for_website_in_light_color_1_1024x640 {
+            get {
+                object obj = ResourceManager.GetObject("light-color-background-images-for-website-top-hd-images-for-free-background-for-w" +
+                        "ebsite-in-light-color-1-1024x640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading {
             get {
                 object obj = ResourceManager.GetObject("loading", resourceCulture);
@@ -183,6 +204,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Modern_Background_02 {
+            get {
+                object obj = ResourceManager.GetObject("Modern-Background-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap npp {
             get {
                 object obj = ResourceManager.GetObject("npp", resourceCulture);
@@ -196,6 +227,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         internal static System.Drawing.Bitmap sevenzip {
             get {
                 object obj = ResourceManager.GetObject("sevenzip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spots_rainbow_background_light_colour_photo_rainbow_background_9 {
+            get {
+                object obj = ResourceManager.GetObject("spots-rainbow-background-light-colour-photo-rainbow-background-9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

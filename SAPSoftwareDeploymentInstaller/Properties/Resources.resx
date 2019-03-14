@@ -124,6 +124,9 @@
   <data name="ireport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ireport2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Modern-Background-02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modern-Background-02.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Downloadcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Downloadcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,16 +154,25 @@
   <data name="loadingx75" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loadingx75.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ezgif.com-resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ezgif.com-resize.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="jaspersoft_studio_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jaspersoft_studio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ezgif.com-resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ezgif.com-resize.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="filezilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filezilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bluewhite-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bluewhite-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spots-rainbow-background-light-colour-photo-rainbow-background-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spots-rainbow-background-light-colour-photo-rainbow-background-9.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filezilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filezilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
