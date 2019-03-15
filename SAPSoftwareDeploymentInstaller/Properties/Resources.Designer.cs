@@ -63,6 +63,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkgreen {
+            get {
+                object obj = ResourceManager.GetObject("checkgreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Download {
             get {
                 object obj = ResourceManager.GetObject("Download", resourceCulture);
@@ -86,6 +96,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         internal static System.Drawing.Bitmap Downloadfilled {
             get {
                 object obj = ResourceManager.GetObject("Downloadfilled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filedownload {
+            get {
+                object obj = ResourceManager.GetObject("filedownload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         internal static System.Drawing.Bitmap sevenzip {
             get {
                 object obj = ResourceManager.GetObject("sevenzip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tinyloading {
+            get {
+                object obj = ResourceManager.GetObject("tinyloading", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

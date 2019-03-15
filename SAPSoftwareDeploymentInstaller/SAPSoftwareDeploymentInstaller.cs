@@ -21,6 +21,14 @@ namespace SAPSoftwareDeploymentInstaller
 
         //global stuff
 
+        string user = Environment.UserName;
+        string userDir = @"C:\Users\" + Environment.UserName + @"\SAPSDITemp";
+        string sevenZipInstaller = "7z1900-x64.exe";
+        string nppInstaller = "npp.7.6.4.Installer.x64.exe";
+        string jaspersoftInstaller = "TIB_js-studiocomm_6.6.0_windows_x86_64.exe";
+        string filezillaInstaller = "FileZilla_3.41.1_win64-setup.exe";
+        string greenshotInstaller = "Greenshot-INSTALLER-1.2.10.6-RELEASE.exe";
+
         private void installButton_MouseEnter(object sender, EventArgs e)
         {
             this.installButton.Image = Resources.Downloadcolor;
@@ -86,8 +94,6 @@ namespace SAPSoftwareDeploymentInstaller
             dataGridView1.Refresh();
 
             //install temp user directory
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
             System.IO.Directory.CreateDirectory(userDir);
             installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Creating temp directory: " + userDir + " ...Done.");
 
@@ -101,12 +107,12 @@ namespace SAPSoftwareDeploymentInstaller
             //looks at each checkbox and adds to the table if it is checked 
             if (iReport451CheckBox.Checked == true)
             {
-                dataGridView1.Rows.Add("iReport 4.5.1", "working...", "working...");
+                dataGridView1.Rows.Add("iReport 4.5.1", Resources.filedownload);
                 //check if jre is installed
                 string javaFile = @"C:\Program Files (x86)\Java\jre1.7.0_25\bin\java.exe";
                 if (!System.IO.File.Exists(javaFile))
                 {
-                    dataGridView1.Rows.Add("jre1.7.0_25", "working...", "working...");
+                    dataGridView1.Rows.Add("jre1.7.0_25", Resources.filedownload);
                 }
             }
 
@@ -115,7 +121,7 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (sevenZipCheckBox.Checked == true)
             {
-                dataGridView1.Rows.Add("7zip", "working...", "working...");
+                dataGridView1.Rows.Add("7zip", Resources.filedownload);
             }
 
             /////////////////
@@ -123,7 +129,7 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (nPlusPlusCheckBox.Checked == true)
             {
-                dataGridView1.Rows.Add("N++", "working...", "working...");
+                dataGridView1.Rows.Add("N++", Resources.filedownload);
             }
 
             /////////////////
@@ -131,7 +137,7 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (virtualBoxCheckBox.Checked == true)
             {
-                dataGridView1.Rows.Add("VirtualBox", "working...", "working...");
+                dataGridView1.Rows.Add("VirtualBox", Resources.filedownload);
             }
 
             /////////////////
@@ -139,7 +145,7 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (jaspersoftStudioCheckBox.Checked == true)
             {
-                dataGridView1.Rows.Add("Jaspersoft Studio", "working...", "working...");
+                dataGridView1.Rows.Add("Jaspersoft Studio", Resources.filedownload);
             }
 
             /////////////////
@@ -147,7 +153,7 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (greenshotCheckBox.Checked == true)
             {
-                dataGridView1.Rows.Add("Greenshot", "working...", "working...");
+                dataGridView1.Rows.Add("Greenshot", Resources.filedownload);
             }
 
             /////////////////
@@ -155,7 +161,7 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (filezillaCheckBox.Checked == true)
             {
-                dataGridView1.Rows.Add("FileZilla", "working...", "working...");
+                dataGridView1.Rows.Add("FileZilla", Resources.filedownload);
             }
 
             //////////////////////////////////
@@ -174,27 +180,28 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
                         new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/ireport451/iReport-4.5.1.zip"),
                         // Param2 = Path to save
                         userDir + @"\iReport-4.5.1.zip"
                     );
+                    wc.DownloadFileCompleted += DownloadCompleted;
                 }
 
                 string javaFile = @"C:\Program Files (x86)\Java\jre1.7.0_25\bin\java.exe";
                 if (!System.IO.File.Exists(javaFile))
                 {
                     installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading jre1.7.0_25 ....");
-                    using (WebClient wc2 = new WebClient())
+                    using (WebClient wc = new WebClient())
                     {
-                        wc2.DownloadProgressChanged += wc2_DownloadProgressChanged;
+                        wc.DownloadProgressChanged += wc_DownloadProgressChanged;
 
-                        wc2.DownloadFileAsync(
+                        wc.DownloadFileAsync(
                             // Param1 = Link of file
                             new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/jre17025/Java.zip"),
                             // Param2 = Path to save
                             userDir + @"\Java.zip"
                         );
+                        wc.DownloadFileCompleted += DownloadCompleted2;
                     }
                 }
             }
@@ -204,19 +211,18 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (sevenZipCheckBox.Checked == true)
             {
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading 7zip 64-bit ....");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading "+sevenZipInstaller+" ....");
 
-                using (WebClient wc3 = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
-                    wc3.DownloadProgressChanged += wc3_DownloadProgressChanged;
-                    wc3.DownloadFileAsync(
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/7zip/7z1900-x64.exe"),
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/7zip/"+sevenZipInstaller),
                         // Param2 = Path to save
-                        userDir + @"\7z1900-x64.exe"
+                        userDir + @"\"+sevenZipInstaller
                     );
-                    wc3.DownloadFileCompleted += DownloadCompleted3;
+                    wc.DownloadFileCompleted += DownloadCompleted3;
                 }
             }
 
@@ -225,19 +231,18 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (nPlusPlusCheckBox.Checked == true)
             {
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading Notepad++ 64-bit ....");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading "+nppInstaller+" ....");
 
-                using (WebClient wc4 = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
-                    wc4.DownloadProgressChanged += wc4_DownloadProgressChanged;
-                    wc4.DownloadFileAsync(
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/npp/npp.7.6.4.Installer.x64.exe"),
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/npp/"+nppInstaller),
                         // Param2 = Path to save
-                        userDir + @"\npp.7.6.4.Installer.x64.exe"
+                        userDir + @"\"+nppInstaller
                     );
-                    wc4.DownloadFileCompleted += DownloadCompleted4;
+                    wc.DownloadFileCompleted += DownloadCompleted4;
                 }
             }
 
@@ -248,10 +253,10 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading VirtualBox 64-bit ....");
 
-                using (WebClient wc5 = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
-                    wc5.DownloadProgressChanged += wc5_DownloadProgressChanged;
-                    wc5.DownloadFileAsync(
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
                         // Param1 = Link of file
                         //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
                         new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/virtualbox/VirtualBox-6.0.4-r128413-MultiArch_amd64.msi"),
@@ -260,17 +265,17 @@ namespace SAPSoftwareDeploymentInstaller
                     );
                 }
 
-                using (WebClient wc5 = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
-                    wc5.DownloadProgressChanged += wc5_DownloadProgressChanged;
-                    wc5.DownloadFileAsync(
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
                         // Param1 = Link of file
                         //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
                         new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/virtualbox/common.cab"),
                         // Param2 = Path to save
                         userDir + @"\common.cab"
                     );
-                    wc5.DownloadFileCompleted += DownloadCompleted5;
+                    wc.DownloadFileCompleted += DownloadCompleted5;
                 }
             }
 
@@ -279,19 +284,18 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (jaspersoftStudioCheckBox.Checked == true)
             {
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading Jaspersoft Studio ....");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading "+jaspersoftInstaller+" ....");
 
-                using (WebClient wc6 = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
-                    wc6.DownloadProgressChanged += wc6_DownloadProgressChanged;
-                    wc6.DownloadFileAsync(
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/jaspersoftstudio/TIB_js-studiocomm_6.6.0_windows_x86_64.exe"),
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/jaspersoftstudio/"+jaspersoftInstaller),
                         // Param2 = Path to save
-                        userDir + @"\TIB_js-studiocomm_6.6.0_windows_x86_64.exe"
+                        userDir + @"\"+jaspersoftInstaller
                     );
-                    wc6.DownloadFileCompleted += DownloadCompleted6;
+                    wc.DownloadFileCompleted += DownloadCompleted6;
                 }
             }
 
@@ -300,19 +304,19 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (greenshotCheckBox.Checked == true)
             {
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading Greenshot ....");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading "+greenshotInstaller+" ....");
 
-                using (WebClient wc7 = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
-                    wc7.DownloadProgressChanged += wc7_DownloadProgressChanged;
-                    wc7.DownloadFileAsync(
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
                         // Param1 = Link of file
                         //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/greenshot/Greenshot-INSTALLER-1.2.10.6-RELEASE.exe"),
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/greenshot/"+greenshotInstaller),
                         // Param2 = Path to save
-                        userDir + @"\Greenshot-INSTALLER-1.2.10.6-RELEASE.exe"
+                        userDir + @"\"+greenshotInstaller
                     );
-                    wc7.DownloadFileCompleted += DownloadCompleted7;
+                    wc.DownloadFileCompleted += DownloadCompleted7;
                 }
             }
 
@@ -321,135 +325,105 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (filezillaCheckBox.Checked == true)
             {
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading FileZilla ....");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading "+filezillaInstaller+" ....");
 
-                using (WebClient wc8 = new WebClient())
+                using (WebClient wc = new WebClient())
                 {
-                    wc8.DownloadProgressChanged += wc8_DownloadProgressChanged;
-                    wc8.DownloadFileAsync(
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
                         // Param1 = Link of file
                         //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/filezilla/FileZilla_3.41.1_win64-setup.exe"),
+                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/filezilla/"+filezillaInstaller),
                         // Param2 = Path to save
-                        userDir + @"\FileZilla_3.41.1_win64-setup.exe"
+                        userDir + @"\"+filezillaInstaller
                     );
-                    wc8.DownloadFileCompleted += DownloadCompleted8;
+                    wc.DownloadFileCompleted += DownloadCompleted8;
                 }
             }
             //System.IO.Directory.Delete(userDir);
         }
+
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+            progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
 
 
+            string startPath = userDir + @"/zip";
+            string zipPath = userDir + @"\iReport-4.5.1.zip";
+            string extractPath = @"C:\Program Files (x86)\Jaspersoft";
+            System.IO.Directory.CreateDirectory(extractPath);
+
+            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
+            //create desktop shortcut
+            object shDesktop = (object)"Desktop";
+            WshShell shell = new WshShell();
+            string shortcutAddress = (string)shell.SpecialFolders.Item(ref shDesktop) + @"\iReport 4.5.1.lnk";
+            IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutAddress);
+            shortcut.Description = "Shortcut for iReport 4.5.1";
+            //shortcut.Hotkey = "Ctrl+Shift+N";
+            shortcut.TargetPath = @"C:\Program Files (x86)\Jaspersoft\iReport-4.5.1\bin\ireport.exe";
+            shortcut.Save();
+
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing iReport 4.5.1 ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
-                    row.Cells[1].Value = e.ProgressPercentage + @"%";
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                }
+                if (row.Cells[1].Value != Resources.checkgreen)
+                {
+                    loadingPictureBox.Visible = true;
+                    //disable the run abliity if running
+                    installButton.Enabled = false;
+                }
+                else
+                {
+                    loadingPictureBox.Visible = false;
+                    //enable the run abliity if complete
+                    installButton.Enabled = true;
+                }
+
             }
 
-            if (e.ProgressPercentage == 100)
+            if (progressBar1.Value == 100)
             {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-                    if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
-                        row.Cells[1].Value = "complete!";
-                    if (row.Cells[1].Value.ToString() != "complete!")
-                    {
-                        loadingPictureBox.Visible = true;
-                        //disable the run abliity if running
-                        installButton.Enabled = false;
-                    }
-                    else
-                    {
-                        loadingPictureBox.Visible = false;
-                        //enable the run abliity if complete
-                        installButton.Enabled = true;
-                    }
-                }
-
-                string startPath = userDir + @"/zip";
-                string zipPath = userDir + @"\iReport-4.5.1.zip";
-                string extractPath = @"C:\Program Files (x86)\Jaspersoft";
-                System.IO.Directory.CreateDirectory(extractPath);
-
-
-                try
-                {
-                    System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
-                }
-                catch
-                {
-                    //create desktop shortcut
-                    object shDesktop = (object)"Desktop";
-                    WshShell shell = new WshShell();
-                    string shortcutAddress = (string)shell.SpecialFolders.Item(ref shDesktop) + @"\iReport 4.5.1.lnk";
-                    IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutAddress);
-                    shortcut.Description = "Shortcut for iReport 4.5.1";
-                    //shortcut.Hotkey = "Ctrl+Shift+N";
-                    shortcut.TargetPath = @"C:\Program Files (x86)\Jaspersoft\iReport-4.5.1\bin\ireport.exe";
-                    shortcut.Save();
-
-                    //update install table
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
-                    {
-                        if (row.Cells[0].Value.ToString() == "iReport 4.5.1")
-                            row.Cells[2].Value = "complete!";
-                    }
-                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing iReport 4.5.1 ....Done.");
-                }
+                loadingPictureBox.Visible = false;
+                //enable the run abliity if complete
+                installButton.Enabled = true;
             }
         }
 
-        void wc2_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e2)
+        private void DownloadCompleted2(object sender, AsyncCompletedEventArgs e)
         {
-            
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+            string startPath = userDir + @"/zip";
+            string zipPath = userDir + @"\Java.zip";
+            string extractPath = @"C:\Program Files (x86)";
+            System.IO.File.SetAttributes(extractPath, FileAttributes.Normal);
+
+            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing jre1.7.0_25 ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
-                    row.Cells[1].Value = e2.ProgressPercentage + @"%";
-            }
-
-            if (e2.ProgressPercentage == 100)
-            {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
-                        row.Cells[1].Value = "complete!";
-                    if (row.Cells[1].Value.ToString() != "complete!")
-                    {
-                        loadingPictureBox.Visible = true;
-                        //disable the run abliity if running
-                        installButton.Enabled = false;
-                    }
-                    else
-                    {
-                        loadingPictureBox.Visible = false;
-                        //enable the run abliity if complete
-                        installButton.Enabled = true;
-                    }
+                    row.Cells[1].Value = Resources.checkgreen;
                 }
-
-                string startPath = userDir + @"/zip";
-                string zipPath = userDir + @"\Java.zip";
-                string extractPath = @"C:\Program Files (x86)";
-                System.IO.File.SetAttributes(extractPath, FileAttributes.Normal);
-                try
+                if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
+                    loadingPictureBox.Visible = true;
+                    //disable the run abliity if running
+                    installButton.Enabled = false;
                 }
-                catch
+                else
                 {
-                    foreach (DataGridViewRow row in dataGridView1.Rows)
-                    {
-                        if (row.Cells[0].Value.ToString() == "jre1.7.0_25")
-                            row.Cells[2].Value = "complete!";
-                    }
-                    installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing jre1.7.0_25 ....Done.");
+                    loadingPictureBox.Visible = false;
+                    //enable the run abliity if complete
+                    installButton.Enabled = true;
                 }
             }
         }
@@ -457,16 +431,7 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         //7ZIP///////////
         /////////////////
-        void wc3_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e3)
-        {
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells[0].Value.ToString() == "7zip")
-                    row.Cells[1].Value = e3.ProgressPercentage + @"%";
-            }
-        }
+
 
         private void DownloadCompleted3(object sender, AsyncCompletedEventArgs e)
         {
@@ -474,10 +439,10 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (row.Cells[0].Value.ToString() == "7zip")
                 {
-                    row.Cells[1].Value = "complete!";
-                    ProcessFolder3();
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder3(user, userDir, sevenZipInstaller);
                 }
-                if (row.Cells[1].Value.ToString() != "complete!")
+                if (row.Cells[1].Value != Resources.checkgreen)
                 {
                     loadingPictureBox.Visible = true;
                     //disable the run abliity if running
@@ -491,64 +456,26 @@ namespace SAPSoftwareDeploymentInstaller
                 }
             }
         }
-        private static void ProcessFolder3()
+        private void ProcessFolder3(string user, string userDir, string sevenZipInstaller)
         {
-            //install temp user directory
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-
-            if (Directory.GetFiles(userDir, "7z*.exe").Length > 0)
+            if (Directory.GetFiles(userDir, sevenZipInstaller).Length > 0)
             {
-                //int count = Directory.GetFiles(userDir, "*.*").Length;
-                string[] files = Directory.GetFiles(userDir, "7z*.exe*");
+                string[] files = Directory.GetFiles(userDir, sevenZipInstaller);
 
                 foreach (var file in files)
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/S /D=""C:\Program Files\7-Zip""'";
                     //Deploy application  
-                    Console.Read(); DeployApplications3(fileNameWithPath, fileName); Console.ReadLine();
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
-            }
-        }
-
-        public static void DeployApplications3(string executableFilePath, string fileName)
-        {
-            PowerShell powerShell = null;
-            Console.WriteLine("Deploying application..." + executableFilePath);
-            try
-            {
-                using (powerShell = PowerShell.Create())
-                {
-                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/S /D=""C:\Program Files\7-Zip""' -Wait -PassThru");
-                    Collection<PSObject> PSOutput = powerShell.Invoke();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error occured: {0}", ex.InnerException);
-                //throw;  
-            }
-            finally
-            {
-                if (powerShell != null)
-                    powerShell.Dispose();
             }
         }
 
         /////////////////
         //N++////////////
         /////////////////
-        void wc4_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e4)
-        {
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells[0].Value.ToString() == "N++")
-                    row.Cells[1].Value = e4.ProgressPercentage + @"%";
-            }
-        }
 
         private void DownloadCompleted4(object sender, AsyncCompletedEventArgs e)
         {
@@ -556,10 +483,10 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (row.Cells[0].Value.ToString() == "N++")
                 {
-                    row.Cells[1].Value = "complete!";
-                    ProcessFolder4();
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder4(user, userDir, nppInstaller);
                 }
-                if (row.Cells[1].Value.ToString() != "complete!")
+                if (row.Cells[1].Value != Resources.checkgreen)
                 {
                     loadingPictureBox.Visible = true;
                     //disable the run abliity if running
@@ -573,82 +500,26 @@ namespace SAPSoftwareDeploymentInstaller
                 }
             }
         }
-        private static void ProcessFolder4()
+        private void ProcessFolder4(string user, string userDir, string nppInstaller)
         {
-            //install temp user directory
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-
-            if (Directory.GetFiles(userDir, "npp*.exe").Length > 0)
+            if (Directory.GetFiles(userDir, nppInstaller).Length > 0)
             {
-                //int count = Directory.GetFiles(userDir, "*.*").Length;
-                string[] files = Directory.GetFiles(userDir, "npp*.exe*");
+                string[] files = Directory.GetFiles(userDir, nppInstaller);
 
                 foreach (var file in files)
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"/S";
                     //Deploy application  
-                    Console.Read(); DeployApplications4(fileNameWithPath, fileName); Console.ReadLine();
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
-            }
-        }
-
-        public static void DeployApplications4(string executableFilePath, string fileName)
-        {
-            PowerShell powerShell = null;
-            Console.WriteLine("Deploying application..." + executableFilePath);
-            try
-            {
-                using (powerShell = PowerShell.Create())
-                {
-                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/S /D=""C:\Program Files\7-Zip""' -Wait -PassThru");
-
-
-                    Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
-                    {
-
-                        if (outputItem != null)
-                        {
-                            Console.WriteLine(outputItem.BaseObject.GetType().FullName);
-                            Console.WriteLine(outputItem.BaseObject.ToString() + "\n");
-                        }
-                    }
-
-                    if (powerShell.Streams.Error.Count > 0)
-                    {
-                        string temp = powerShell.Streams.Error.First().ToString();
-                        Console.WriteLine("Error: {0}", temp);
-                    }
-                    else
-                        Console.WriteLine("Installation has completed successfully.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error occured: {0}", ex.InnerException);
-                //throw;  
-            }
-            finally
-            {
-                if (powerShell != null)
-                    powerShell.Dispose();
             }
         }
 
         /////////////////
         //VIRTUALBOX/////
         /////////////////
-        void wc5_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e5)
-        {
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells[0].Value.ToString() == "VirtualBox")
-                    row.Cells[1].Value = e5.ProgressPercentage + @"%";
-            }
-        }
 
         private void DownloadCompleted5(object sender, AsyncCompletedEventArgs e)
         {
@@ -656,10 +527,10 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (row.Cells[0].Value.ToString() == "VirtualBox")
                 {
-                    row.Cells[1].Value = "complete!";
+                    row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder5();
                 }
-                if (row.Cells[1].Value.ToString() != "complete!")
+                if (row.Cells[1].Value != Resources.checkgreen)
                 {
                     loadingPictureBox.Visible = true;
                     //disable the run abliity if running
@@ -688,67 +559,16 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/quiet /qn /norestart ALLUSERS=2'";
                     //Deploy application  
-                    Console.Read(); DeployApplications5(fileNameWithPath, fileName); Console.ReadLine();
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
-            }
-        }
-
-        public static void DeployApplications5(string executableFilePath, string fileName)
-        {
-            PowerShell powerShell = null;
-            Console.WriteLine("Deploying application..." + executableFilePath);
-            try
-            {
-                using (powerShell = PowerShell.Create())
-                {
-                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/quiet /qn /norestart ALLUSERS=2' -Wait -PassThru");
-
-
-                    Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
-                    {
-
-                        if (outputItem != null)
-                        {
-                            Console.WriteLine(outputItem.BaseObject.GetType().FullName);
-                            Console.WriteLine(outputItem.BaseObject.ToString() + "\n");
-                        }
-                    }
-
-                    if (powerShell.Streams.Error.Count > 0)
-                    {
-                        string temp = powerShell.Streams.Error.First().ToString();
-                        Console.WriteLine("Error: {0}", temp);
-                    }
-                    else
-                        Console.WriteLine("Installation has completed successfully.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error occured: {0}", ex.InnerException);
-                //throw;  
-            }
-            finally
-            {
-                if (powerShell != null)
-                    powerShell.Dispose();
             }
         }
 
         /////////////////
         //JASPERSOFT/////
         /////////////////
-        void wc6_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e6)
-        {
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells[0].Value.ToString() == "Jaspersoft Studio")
-                    row.Cells[1].Value = e6.ProgressPercentage + @"%";
-            }
-        }
 
         private void DownloadCompleted6(object sender, AsyncCompletedEventArgs e)
         {
@@ -756,10 +576,10 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (row.Cells[0].Value.ToString() == "Jaspersoft Studio")
                 {
-                    row.Cells[1].Value = "complete!";
+                    row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder6();
                 }
-                if (row.Cells[1].Value.ToString() != "complete!")
+                if (row.Cells[1].Value != Resources.checkgreen)
                 {
                     loadingPictureBox.Visible = true;
                     //disable the run abliity if running
@@ -841,8 +661,6 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         void wc7_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e7)
         {
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "Greenshot")
@@ -856,10 +674,10 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (row.Cells[0].Value.ToString() == "Greenshot")
                 {
-                    row.Cells[1].Value = "complete!";
+                    row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder7();
                 }
-                if (row.Cells[1].Value.ToString() != "complete!")
+                if (row.Cells[1].Value != Resources.checkgreen)
                 {
                     loadingPictureBox.Visible = true;
                     //disable the run abliity if running
@@ -939,16 +757,6 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         //FILEZILLA//////
         /////////////////
-        void wc8_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e8)
-        {
-            var user = Environment.UserName;
-            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells[0].Value.ToString() == "FileZilla")
-                    row.Cells[1].Value = e8.ProgressPercentage + @"%";
-            }
-        }
 
         private void DownloadCompleted8(object sender, AsyncCompletedEventArgs e)
         {
@@ -956,10 +764,10 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (row.Cells[0].Value.ToString() == "FileZilla")
                 {
-                    row.Cells[1].Value = "complete!";
+                    row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder8();
                 }
-                if (row.Cells[1].Value.ToString() != "complete!")
+                if (row.Cells[1].Value != Resources.checkgreen)
                 {
                     loadingPictureBox.Visible = true;
                     //disable the run abliity if running
@@ -988,13 +796,14 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/NCRC /S /D=%ApplicationDir%'";
                     //Deploy application  
-                    Console.Read(); DeployApplications8(fileNameWithPath, fileName); Console.ReadLine();
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
             }
         }
 
-        public static void DeployApplications8(string executableFilePath, string fileName)
+        public static void DeployApplications(string executableFilePath, string fileName, string argumentList)
         {
             PowerShell powerShell = null;
             Console.WriteLine("Deploying application..." + executableFilePath);
@@ -1002,49 +811,7 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 using (powerShell = PowerShell.Create())
                 {
-                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/NCRC /S /D=%ApplicationDir%' -Wait -PassThru");
-
-
-                    Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
-                    {
-
-                        if (outputItem != null)
-                        {
-                            Console.WriteLine(outputItem.BaseObject.GetType().FullName);
-                            Console.WriteLine(outputItem.BaseObject.ToString() + "\n");
-                        }
-                    }
-
-                    if (powerShell.Streams.Error.Count > 0)
-                    {
-                        string temp = powerShell.Streams.Error.First().ToString();
-                        Console.WriteLine("Error: {0}", temp);
-                    }
-                    else
-                        Console.WriteLine("Installation has completed successfully.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error occured: {0}", ex.InnerException);
-                //throw;  
-            }
-            finally
-            {
-                if (powerShell != null)
-                    powerShell.Dispose();
-            }
-        }
-
-        public static void DeployApplications(string executableFilePath, string fileName)
-        {
-            PowerShell powerShell = null;
-            Console.WriteLine("Deploying application..." + executableFilePath);
-            try
-            {
-                using (powerShell = PowerShell.Create())
-                {
-                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/NCRC /S /D=%ApplicationDir%' -Wait -PassThru");
+                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList "+argumentList+" -Wait -PassThru");
 
 
                     Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)

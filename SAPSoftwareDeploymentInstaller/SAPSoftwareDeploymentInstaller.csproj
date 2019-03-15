@@ -220,5 +220,14 @@
   <ItemGroup>
     <None Include="Resources\light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tinyloading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkgreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filedownload.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
