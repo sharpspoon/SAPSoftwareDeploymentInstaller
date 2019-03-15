@@ -76,7 +76,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.installLogRichTextBox.Location = new System.Drawing.Point(0, 0);
             this.installLogRichTextBox.Name = "installLogRichTextBox";
             this.installLogRichTextBox.ReadOnly = true;
-            this.installLogRichTextBox.Size = new System.Drawing.Size(435, 291);
+            this.installLogRichTextBox.Size = new System.Drawing.Size(533, 291);
             this.installLogRichTextBox.TabIndex = 3;
             this.installLogRichTextBox.Text = "";
             // 
@@ -95,7 +95,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(264, 291);
             this.dataGridView1.TabIndex = 6;
             // 
             // selectProgramGroupBox
@@ -129,6 +129,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.filezillaCheckBox.TabIndex = 9;
             this.filezillaCheckBox.Text = "         FileZilla";
             this.filezillaCheckBox.UseVisualStyleBackColor = true;
+            this.filezillaCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.filezillaCheckBox_MouseDown);
+            this.filezillaCheckBox.MouseEnter += new System.EventHandler(this.filezillaCheckBox_MouseEnter);
+            this.filezillaCheckBox.MouseLeave += new System.EventHandler(this.filezillaCheckBox_MouseLeave);
+            this.filezillaCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.filezillaCheckBox_MouseUp);
             // 
             // greenshotCheckBox
             // 
@@ -143,6 +147,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.greenshotCheckBox.TabIndex = 8;
             this.greenshotCheckBox.Text = "         Greenshot";
             this.greenshotCheckBox.UseVisualStyleBackColor = true;
+            this.greenshotCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.greenshotCheckBox_MouseDown);
+            this.greenshotCheckBox.MouseEnter += new System.EventHandler(this.greenshotCheckBox_MouseEnter);
+            this.greenshotCheckBox.MouseLeave += new System.EventHandler(this.greenshotCheckBox_MouseLeave);
+            this.greenshotCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.greenshotCheckBox_MouseUp);
             // 
             // jaspersoftStudioCheckBox
             // 
@@ -157,6 +165,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.jaspersoftStudioCheckBox.TabIndex = 7;
             this.jaspersoftStudioCheckBox.Text = "         JasperSoft Studio";
             this.jaspersoftStudioCheckBox.UseVisualStyleBackColor = true;
+            this.jaspersoftStudioCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.jaspersoftStudioCheckBox_MouseDown);
+            this.jaspersoftStudioCheckBox.MouseEnter += new System.EventHandler(this.jaspersoftStudioCheckBox_MouseEnter);
+            this.jaspersoftStudioCheckBox.MouseLeave += new System.EventHandler(this.jaspersoftStudioCheckBox_MouseLeave);
+            this.jaspersoftStudioCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.jaspersoftStudioCheckBox_MouseUp);
             // 
             // virtualBoxCheckBox
             // 
@@ -171,6 +183,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.virtualBoxCheckBox.TabIndex = 6;
             this.virtualBoxCheckBox.Text = "         VirtualBox";
             this.virtualBoxCheckBox.UseVisualStyleBackColor = true;
+            this.virtualBoxCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.virtualBoxCheckBox_MouseDown);
+            this.virtualBoxCheckBox.MouseEnter += new System.EventHandler(this.virtualBoxCheckBox_MouseEnter);
+            this.virtualBoxCheckBox.MouseLeave += new System.EventHandler(this.virtualBoxCheckBox_MouseLeave);
+            this.virtualBoxCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.virtualBoxCheckBox_MouseUp);
             // 
             // nPlusPlusCheckBox
             // 
@@ -185,6 +201,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.nPlusPlusCheckBox.TabIndex = 5;
             this.nPlusPlusCheckBox.Text = "         Notepad++";
             this.nPlusPlusCheckBox.UseVisualStyleBackColor = true;
+            this.nPlusPlusCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.nPlusPlusCheckBox_MouseDown);
+            this.nPlusPlusCheckBox.MouseEnter += new System.EventHandler(this.nPlusPlusCheckBox_MouseEnter);
+            this.nPlusPlusCheckBox.MouseLeave += new System.EventHandler(this.nPlusPlusCheckBox_MouseLeave);
+            this.nPlusPlusCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.nPlusPlusCheckBox_MouseUp);
             // 
             // sevenZipCheckBox
             // 
@@ -199,6 +219,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.sevenZipCheckBox.TabIndex = 1;
             this.sevenZipCheckBox.Text = "         7zip";
             this.sevenZipCheckBox.UseVisualStyleBackColor = true;
+            this.sevenZipCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.sevenZipCheckBox_MouseDown);
+            this.sevenZipCheckBox.MouseEnter += new System.EventHandler(this.sevenZipCheckBox_MouseEnter);
+            this.sevenZipCheckBox.MouseLeave += new System.EventHandler(this.sevenZipCheckBox_MouseLeave);
+            this.sevenZipCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.sevenZipCheckBox_MouseUp);
             // 
             // iReport451CheckBox
             // 
@@ -213,6 +237,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.iReport451CheckBox.TabIndex = 4;
             this.iReport451CheckBox.Text = "         iReport 4.5.1";
             this.iReport451CheckBox.UseVisualStyleBackColor = true;
+            this.iReport451CheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iReport451CheckBox_MouseDown);
+            this.iReport451CheckBox.MouseEnter += new System.EventHandler(this.iReport451CheckBox_MouseEnter);
+            this.iReport451CheckBox.MouseLeave += new System.EventHandler(this.iReport451CheckBox_MouseLeave);
+            this.iReport451CheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iReport451CheckBox_MouseUp);
             // 
             // splitContainer1
             // 
@@ -230,7 +258,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             this.splitContainer1.Panel2.Controls.Add(this.installLogRichTextBox);
             this.splitContainer1.Size = new System.Drawing.Size(801, 291);
-            this.splitContainer1.SplitterDistance = 362;
+            this.splitContainer1.SplitterDistance = 264;
             this.splitContainer1.TabIndex = 8;
             // 
             // menuStrip1

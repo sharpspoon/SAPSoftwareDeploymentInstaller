@@ -9,6 +9,7 @@ using System.Management.Automation;
 using System.Collections.ObjectModel;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
+using System.Drawing;
 
 namespace SAPSoftwareDeploymentInstaller
 {
@@ -20,6 +21,147 @@ namespace SAPSoftwareDeploymentInstaller
         }
 
         //global stuff
+
+        private void iReport451CheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            //this.iReport451CheckBox.ForeColor = Color.Green;
+            this.iReport451CheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void iReport451CheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void iReport451CheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void iReport451CheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
 
         string user = Environment.UserName;
         string userDir = @"C:\Users\" + Environment.UserName + @"\SAPSDITemp";
