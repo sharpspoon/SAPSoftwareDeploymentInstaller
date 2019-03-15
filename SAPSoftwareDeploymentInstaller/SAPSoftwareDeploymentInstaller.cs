@@ -521,25 +521,7 @@ namespace SAPSoftwareDeploymentInstaller
                 using (powerShell = PowerShell.Create())
                 {
                     powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/S /D=""C:\Program Files\7-Zip""' -Wait -PassThru");
-
-
-                    Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
-                    {
-
-                        if (outputItem != null)
-                        {
-                            Console.WriteLine(outputItem.BaseObject.GetType().FullName);
-                            Console.WriteLine(outputItem.BaseObject.ToString() + "\n");
-                        }
-                    }
-
-                    if (powerShell.Streams.Error.Count > 0)
-                    {
-                        string temp = powerShell.Streams.Error.First().ToString();
-                        Console.WriteLine("Error: {0}", temp);
-                    }
-                    else
-                        Console.WriteLine("Installation has completed successfully.");
+                    Collection<PSObject> PSOutput = powerShell.Invoke();
                 }
             }
             catch (Exception ex)
@@ -1013,6 +995,48 @@ namespace SAPSoftwareDeploymentInstaller
         }
 
         public static void DeployApplications8(string executableFilePath, string fileName)
+        {
+            PowerShell powerShell = null;
+            Console.WriteLine("Deploying application..." + executableFilePath);
+            try
+            {
+                using (powerShell = PowerShell.Create())
+                {
+                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/NCRC /S /D=%ApplicationDir%' -Wait -PassThru");
+
+
+                    Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
+                    {
+
+                        if (outputItem != null)
+                        {
+                            Console.WriteLine(outputItem.BaseObject.GetType().FullName);
+                            Console.WriteLine(outputItem.BaseObject.ToString() + "\n");
+                        }
+                    }
+
+                    if (powerShell.Streams.Error.Count > 0)
+                    {
+                        string temp = powerShell.Streams.Error.First().ToString();
+                        Console.WriteLine("Error: {0}", temp);
+                    }
+                    else
+                        Console.WriteLine("Installation has completed successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error occured: {0}", ex.InnerException);
+                //throw;  
+            }
+            finally
+            {
+                if (powerShell != null)
+                    powerShell.Dispose();
+            }
+        }
+
+        public static void DeployApplications(string executableFilePath, string fileName)
         {
             PowerShell powerShell = null;
             Console.WriteLine("Deploying application..." + executableFilePath);

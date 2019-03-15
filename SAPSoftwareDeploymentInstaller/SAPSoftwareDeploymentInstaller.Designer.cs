@@ -318,7 +318,7 @@ namespace SAPSoftwareDeploymentInstaller
             // loadingPictureBox
             // 
             this.loadingPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.loadingPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.ezgif_com_resize;
+            this.loadingPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.loaderGif;
             this.loadingPictureBox.Location = new System.Drawing.Point(233, 455);
             this.loadingPictureBox.Name = "loadingPictureBox";
             this.loadingPictureBox.Size = new System.Drawing.Size(68, 68);
@@ -331,7 +331,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.AcceptButton = this.installButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::SAPSoftwareDeploymentInstaller.Properties.Resources.light_color_background_images_for_website_top_hd_images_for_free_background_for_website_in_light_color_1_1024x640;
+            this.BackgroundImage = global::SAPSoftwareDeploymentInstaller.Properties.Resources.lightcolorbackground;
             this.ClientSize = new System.Drawing.Size(826, 625);
             this.Controls.Add(this.loadingPictureBox);
             this.Controls.Add(this.sapLinkLabel);
