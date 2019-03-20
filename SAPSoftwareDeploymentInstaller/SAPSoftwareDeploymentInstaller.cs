@@ -223,9 +223,7 @@ namespace SAPSoftwareDeploymentInstaller
 
             //disable the run abliity if running
             installButton.Enabled = false;
-
-            //show loading gif
-            loadingPictureBox.Visible = true;
+            
 
             //get os bit version
             bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
@@ -322,7 +320,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/ireport451/iReport-4.5.1.zip"),
+                        new System.Uri("https://wardr.net/sapsdi/ireport451/iReport-4.5.1.zip"),
                         // Param2 = Path to save
                         userDir + @"\iReport-4.5.1.zip"
                     );
@@ -339,7 +337,7 @@ namespace SAPSoftwareDeploymentInstaller
 
                         wc.DownloadFileAsync(
                             // Param1 = Link of file
-                            new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/jre17025/Java.zip"),
+                            new System.Uri("https://wardr.net/sapsdi/ireport451/Java.zip"),
                             // Param2 = Path to save
                             userDir + @"\Java.zip"
                         );
@@ -360,7 +358,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/7zip/"+sevenZipInstaller),
+                        new System.Uri("https://wardr.net/sapsdi/7zip/" + sevenZipInstaller),
                         // Param2 = Path to save
                         userDir + @"\"+sevenZipInstaller
                     );
@@ -380,7 +378,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/npp/"+nppInstaller),
+                        new System.Uri("https://wardr.net/sapsdi/npp/" + nppInstaller),
                         // Param2 = Path to save
                         userDir + @"\"+nppInstaller
                     );
@@ -400,8 +398,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/virtualbox/VirtualBox-6.0.4-r128413-MultiArch_amd64.msi"),
+                        new System.Uri("https://wardr.net/sapsdi/virtualbox//VirtualBox-6.0.4-r128413-MultiArch_amd64.msi"),
                         // Param2 = Path to save
                         userDir + @"\VirtualBox-6.0.4-r128413-MultiArch_amd64.msi"
                     );
@@ -412,8 +409,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/virtualbox/common.cab"),
+                        new System.Uri("https://wardr.net/sapsdi/virtualbox//common.cab"),
                         // Param2 = Path to save
                         userDir + @"\common.cab"
                     );
@@ -433,7 +429,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/jaspersoftstudio/"+jaspersoftInstaller),
+                        new System.Uri("https://wardr.net/sapsdi/jaspersoftstudio/" + jaspersoftInstaller),
                         // Param2 = Path to save
                         userDir + @"\"+jaspersoftInstaller
                     );
@@ -453,8 +449,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/greenshot/"+greenshotInstaller),
+                        new System.Uri("https://wardr.net/sapsdi/greenshot/" + greenshotInstaller),
                         // Param2 = Path to save
                         userDir + @"\"+greenshotInstaller
                     );
@@ -474,8 +469,7 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        //new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/sapsdblob/test.zip"),//testing
-                        new System.Uri("https://sapsoftwaredeployment.blob.core.windows.net/filezilla/"+filezillaInstaller),
+                        new System.Uri("https://wardr.net/sapsdi/filezilla/" + filezillaInstaller),
                         // Param2 = Path to save
                         userDir + @"\"+filezillaInstaller
                     );
@@ -492,13 +486,13 @@ namespace SAPSoftwareDeploymentInstaller
 
         private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
-
-
             string startPath = userDir + @"/zip";
             string zipPath = userDir + @"\iReport-4.5.1.zip";
             string extractPath = @"C:\Program Files (x86)\Jaspersoft";
+            Directory.Delete(extractPath, true);
             System.IO.Directory.CreateDirectory(extractPath);
 
+            
             System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
             //create desktop shortcut
             object shDesktop = (object)"Desktop";
@@ -519,13 +513,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
@@ -534,7 +526,6 @@ namespace SAPSoftwareDeploymentInstaller
 
             if (progressBar1.Value == 100)
             {
-                loadingPictureBox.Visible = false;
                 //enable the run abliity if complete
                 installButton.Enabled = true;
             }
@@ -557,13 +548,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
@@ -586,13 +575,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
@@ -630,13 +617,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
@@ -674,13 +659,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
@@ -723,13 +706,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
@@ -801,14 +782,6 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         //GREENSHOT//////
         /////////////////
-        void wc7_DownloadProgressChanged(object sender2, DownloadProgressChangedEventArgs e7)
-        {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                if (row.Cells[0].Value.ToString() == "Greenshot")
-                    row.Cells[1].Value = e7.ProgressPercentage + @"%";
-            }
-        }
 
         private void DownloadCompleted7(object sender, AsyncCompletedEventArgs e)
         {
@@ -821,13 +794,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
@@ -911,13 +882,11 @@ namespace SAPSoftwareDeploymentInstaller
                 }
                 if (row.Cells[1].Value != Resources.checkgreen)
                 {
-                    loadingPictureBox.Visible = true;
                     //disable the run abliity if running
                     installButton.Enabled = false;
                 }
                 else
                 {
-                    loadingPictureBox.Visible = false;
                     //enable the run abliity if complete
                     installButton.Enabled = true;
                 }
