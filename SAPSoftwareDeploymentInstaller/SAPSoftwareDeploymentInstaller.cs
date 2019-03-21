@@ -221,9 +221,12 @@ namespace SAPSoftwareDeploymentInstaller
                 return;
             }
 
-            //disable the run abliity if running
-            installButton.Enabled = false;
-            
+            if (progressBar1.Value != 0 && progressBar1.Value != 100)
+            {
+                MessageBox.Show("Process is currently running!", "SAP Software Deployment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             //get os bit version
             bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
@@ -491,7 +494,6 @@ namespace SAPSoftwareDeploymentInstaller
             string extractPath = @"C:\Program Files (x86)\Jaspersoft";
             Directory.Delete(extractPath, true);
             System.IO.Directory.CreateDirectory(extractPath);
-
             
             System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
             //create desktop shortcut
@@ -511,23 +513,6 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                 }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
-                }
-
-            }
-
-            if (progressBar1.Value == 100)
-            {
-                //enable the run abliity if complete
-                installButton.Enabled = true;
             }
         }
 
@@ -546,26 +531,15 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                 }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
-                }
             }
         }
 
         /////////////////
         //7ZIP///////////
         /////////////////
-
-
         private void DownloadCompleted3(object sender, AsyncCompletedEventArgs e)
         {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + sevenZipInstaller + " ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "7zip")
@@ -573,18 +547,9 @@ namespace SAPSoftwareDeploymentInstaller
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder3(user, userDir, sevenZipInstaller);
                 }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
-                }
             }
         }
+
         private void ProcessFolder3(string user, string userDir, string sevenZipInstaller)
         {
             if (Directory.GetFiles(userDir, sevenZipInstaller).Length > 0)
@@ -599,31 +564,22 @@ namespace SAPSoftwareDeploymentInstaller
                     //Deploy application  
                     DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + sevenZipInstaller + " ....Done.");
             }
         }
 
         /////////////////
         //N++////////////
         /////////////////
-
         private void DownloadCompleted4(object sender, AsyncCompletedEventArgs e)
         {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + nppInstaller + " ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "N++")
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder4(user, userDir, nppInstaller);
-                }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
                 }
             }
         }
@@ -641,31 +597,22 @@ namespace SAPSoftwareDeploymentInstaller
                     //Deploy application  
                     DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + nppInstaller + " ....Done.");
             }
         }
 
         /////////////////
         //VIRTUALBOX/////
         /////////////////
-
         private void DownloadCompleted5(object sender, AsyncCompletedEventArgs e)
         {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading VirtualBox 64-bit ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "VirtualBox")
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder5();
-                }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
                 }
             }
         }
@@ -694,9 +641,9 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         //JASPERSOFT/////
         /////////////////
-
         private void DownloadCompleted6(object sender, AsyncCompletedEventArgs e)
         {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + jaspersoftInstaller + " ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "Jaspersoft Studio")
@@ -704,19 +651,9 @@ namespace SAPSoftwareDeploymentInstaller
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder6();
                 }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
-                }
             }
         }
-        private static void ProcessFolder6()
+        private void ProcessFolder6()
         {
             //install temp user directory
             var user = Environment.UserName;
@@ -734,6 +671,7 @@ namespace SAPSoftwareDeploymentInstaller
                     //Deploy application  
                     Console.Read(); DeployApplications6(fileNameWithPath, fileName); Console.ReadLine();
                 }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + jaspersoftInstaller + " ....Done.");
             }
         }
 
@@ -782,25 +720,15 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         //GREENSHOT//////
         /////////////////
-
         private void DownloadCompleted7(object sender, AsyncCompletedEventArgs e)
         {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + greenshotInstaller + " ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "Greenshot")
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder7();
-                }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
                 }
             }
         }
@@ -870,25 +798,15 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         //FILEZILLA//////
         /////////////////
-
         private void DownloadCompleted8(object sender, AsyncCompletedEventArgs e)
         {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + filezillaInstaller + " ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 if (row.Cells[0].Value.ToString() == "FileZilla")
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder8();
-                }
-                if (row.Cells[1].Value != Resources.checkgreen)
-                {
-                    //disable the run abliity if running
-                    installButton.Enabled = false;
-                }
-                else
-                {
-                    //enable the run abliity if complete
-                    installButton.Enabled = true;
                 }
             }
         }
@@ -927,7 +845,6 @@ namespace SAPSoftwareDeploymentInstaller
 
                     Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
                     {
-
                         if (outputItem != null)
                         {
                             Console.WriteLine(outputItem.BaseObject.GetType().FullName);
