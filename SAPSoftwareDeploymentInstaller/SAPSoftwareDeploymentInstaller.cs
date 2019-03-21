@@ -492,8 +492,17 @@ namespace SAPSoftwareDeploymentInstaller
             string startPath = userDir + @"/zip";
             string zipPath = userDir + @"\iReport-4.5.1.zip";
             string extractPath = @"C:\Program Files (x86)\Jaspersoft";
-            Directory.Delete(extractPath, true);
-            System.IO.Directory.CreateDirectory(extractPath);
+
+            if (Directory.Exists(extractPath))
+            {
+                Directory.Delete(extractPath, true);
+                System.IO.Directory.CreateDirectory(extractPath);
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Recreating Directory " + extractPath + "...Done.");
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(extractPath);
+            }
             
             System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractPath);
             //create desktop shortcut
@@ -616,7 +625,7 @@ namespace SAPSoftwareDeploymentInstaller
                 }
             }
         }
-        private static void ProcessFolder5()
+        private void ProcessFolder5()
         {
             //install temp user directory
             var user = Environment.UserName;
@@ -635,6 +644,7 @@ namespace SAPSoftwareDeploymentInstaller
                     //Deploy application  
                     DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing VirtualBox 64-bit  ....Done.");
             }
         }
 
@@ -668,8 +678,9 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/S /D=""C:\Program Files\Jaspersoft""'";
                     //Deploy application  
-                    Console.Read(); DeployApplications6(fileNameWithPath, fileName); Console.ReadLine();
+                    Console.Read(); DeployApplications(fileNameWithPath, fileName, argumentList); Console.ReadLine();
                 }
                 installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + jaspersoftInstaller + " ....Done.");
             }
@@ -732,7 +743,7 @@ namespace SAPSoftwareDeploymentInstaller
                 }
             }
         }
-        private static void ProcessFolder7()
+        private void ProcessFolder7()
         {
             //install temp user directory
             var user = Environment.UserName;
@@ -747,51 +758,11 @@ namespace SAPSoftwareDeploymentInstaller
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/verysilent'";
                     //Deploy application  
-                    Console.Read(); DeployApplications7(fileNameWithPath, fileName); Console.ReadLine();
+                    Console.Read(); DeployApplications(fileNameWithPath, fileName, argumentList); Console.ReadLine();
                 }
-            }
-        }
-
-        public static void DeployApplications7(string executableFilePath, string fileName)
-        {
-            PowerShell powerShell = null;
-            Console.WriteLine("Deploying application..." + executableFilePath);
-            try
-            {
-                using (powerShell = PowerShell.Create())
-                {
-                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/verysilent' -Wait -PassThru");
-
-
-                    Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
-                    {
-
-                        if (outputItem != null)
-                        {
-                            Console.WriteLine(outputItem.BaseObject.GetType().FullName);
-                            Console.WriteLine(outputItem.BaseObject.ToString() + "\n");
-                        }
-                    }
-
-                    if (powerShell.Streams.Error.Count > 0)
-                    {
-                        string temp = powerShell.Streams.Error.First().ToString();
-                        Console.WriteLine("Error: {0}", temp);
-                    }
-                    else
-                        Console.WriteLine("Installation has completed successfully.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error occured: {0}", ex.InnerException);
-                //throw;  
-            }
-            finally
-            {
-                if (powerShell != null)
-                    powerShell.Dispose();
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + greenshotInstaller + " ....Done.");
             }
         }
 
@@ -810,7 +781,7 @@ namespace SAPSoftwareDeploymentInstaller
                 }
             }
         }
-        private static void ProcessFolder8()
+        private void ProcessFolder8()
         {
             //install temp user directory
             var user = Environment.UserName;
@@ -829,6 +800,7 @@ namespace SAPSoftwareDeploymentInstaller
                     //Deploy application  
                     DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + filezillaInstaller + " ....Done.");
             }
         }
 
