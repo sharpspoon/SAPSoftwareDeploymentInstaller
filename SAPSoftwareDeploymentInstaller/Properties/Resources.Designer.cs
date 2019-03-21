@@ -203,6 +203,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap putty {
+            get {
+                object obj = ResourceManager.GetObject("putty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sevenzip {
             get {
                 object obj = ResourceManager.GetObject("sevenzip", resourceCulture);

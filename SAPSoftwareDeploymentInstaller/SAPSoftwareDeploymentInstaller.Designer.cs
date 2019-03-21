@@ -35,6 +35,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.Program = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Downloaded = new System.Windows.Forms.DataGridViewImageColumn();
             this.selectProgramGroupBox = new System.Windows.Forms.GroupBox();
+            this.puttyCheckBox = new System.Windows.Forms.CheckBox();
             this.filezillaCheckBox = new System.Windows.Forms.CheckBox();
             this.greenshotCheckBox = new System.Windows.Forms.CheckBox();
             this.jaspersoftStudioCheckBox = new System.Windows.Forms.CheckBox();
@@ -117,6 +118,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             this.selectProgramGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.selectProgramGroupBox.BackColor = System.Drawing.Color.Transparent;
+            this.selectProgramGroupBox.Controls.Add(this.puttyCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.filezillaCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.greenshotCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.jaspersoftStudioCheckBox);
@@ -130,6 +132,24 @@ namespace SAPSoftwareDeploymentInstaller
             this.selectProgramGroupBox.TabIndex = 7;
             this.selectProgramGroupBox.TabStop = false;
             this.selectProgramGroupBox.Text = "Select Program";
+            // 
+            // puttyCheckBox
+            // 
+            this.puttyCheckBox.AutoSize = true;
+            this.puttyCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.puttyCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.puttyCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.putty;
+            this.puttyCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.puttyCheckBox.Location = new System.Drawing.Point(0, 228);
+            this.puttyCheckBox.Name = "puttyCheckBox";
+            this.puttyCheckBox.Size = new System.Drawing.Size(149, 24);
+            this.puttyCheckBox.TabIndex = 10;
+            this.puttyCheckBox.Text = "         PuTTY                      ";
+            this.puttyCheckBox.UseVisualStyleBackColor = true;
+            this.puttyCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.puttyCheckBox_MouseDown);
+            this.puttyCheckBox.MouseEnter += new System.EventHandler(this.puttyCheckBox_MouseEnter);
+            this.puttyCheckBox.MouseLeave += new System.EventHandler(this.puttyCheckBox_MouseLeave);
+            this.puttyCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.puttyCheckBox_MouseUp);
             // 
             // filezillaCheckBox
             // 
@@ -399,6 +419,7 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Program;
         private System.Windows.Forms.DataGridViewImageColumn Downloaded;
+        private System.Windows.Forms.CheckBox puttyCheckBox;
     }
 }
 

@@ -32,6 +32,15 @@ namespace SAPSoftwareDeploymentInstaller
         {
             this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
+        private void iReport451CheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void iReport451CheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
 
         private void jaspersoftStudioCheckBox_MouseEnter(object sender, EventArgs e)
         {
@@ -39,6 +48,16 @@ namespace SAPSoftwareDeploymentInstaller
         }
 
         private void jaspersoftStudioCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
             this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
@@ -53,12 +72,32 @@ namespace SAPSoftwareDeploymentInstaller
             this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
+        private void nPlusPlusCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
         private void virtualBoxCheckBox_MouseEnter(object sender, EventArgs e)
         {
             this.virtualBoxCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void virtualBoxCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
             this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
@@ -73,12 +112,32 @@ namespace SAPSoftwareDeploymentInstaller
             this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
+        private void sevenZipCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
         private void greenshotCheckBox_MouseEnter(object sender, EventArgs e)
         {
             this.greenshotCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void greenshotCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
             this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
@@ -93,66 +152,6 @@ namespace SAPSoftwareDeploymentInstaller
             this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
-        private void iReport451CheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.iReport451CheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void iReport451CheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void jaspersoftStudioCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void jaspersoftStudioCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void nPlusPlusCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.nPlusPlusCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void nPlusPlusCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void virtualBoxCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.virtualBoxCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void virtualBoxCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void sevenZipCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.sevenZipCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void sevenZipCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void greenshotCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.greenshotCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void greenshotCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
         private void filezillaCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
             this.filezillaCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
@@ -161,6 +160,26 @@ namespace SAPSoftwareDeploymentInstaller
         private void filezillaCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
             this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         string user = Environment.UserName;
@@ -215,7 +234,7 @@ namespace SAPSoftwareDeploymentInstaller
         private void installButton_Click(object sender, EventArgs e)
         {
             //check if any software is selected
-            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false && jaspersoftStudioCheckBox.Checked == false && greenshotCheckBox.Checked == false && filezillaCheckBox.Checked == false)
+            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false && jaspersoftStudioCheckBox.Checked == false && greenshotCheckBox.Checked == false && filezillaCheckBox.Checked == false && puttyCheckBox.Checked == false)
             {
                 MessageBox.Show("Must select at least one program to install.", "SAP Software Deployment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -305,6 +324,14 @@ namespace SAPSoftwareDeploymentInstaller
             if (filezillaCheckBox.Checked == true)
             {
                 dataGridView1.Rows.Add("FileZilla", Resources.filedownload);
+            }
+
+            /////////////////
+            //PUTTY//////////
+            /////////////////
+            if (puttyCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("PuTTY", Resources.filedownload);
             }
 
             //////////////////////////////////
@@ -475,6 +502,26 @@ namespace SAPSoftwareDeploymentInstaller
                         new System.Uri("https://wardr.net/sapsdi/filezilla/" + filezillaInstaller),
                         // Param2 = Path to save
                         userDir + @"\"+filezillaInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted8;
+                }
+            }
+
+            /////////////////
+            //PUTTY//////////
+            /////////////////
+            if (puttyCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + filezillaInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/putty/" + filezillaInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + filezillaInstaller
                     );
                     wc.DownloadFileCompleted += DownloadCompleted8;
                 }
@@ -686,48 +733,6 @@ namespace SAPSoftwareDeploymentInstaller
             }
         }
 
-        public static void DeployApplications6(string executableFilePath, string fileName)
-        {
-            PowerShell powerShell = null;
-            Console.WriteLine("Deploying application..." + executableFilePath);
-            try
-            {
-                using (powerShell = PowerShell.Create())
-                {
-                    powerShell.AddScript(@"$setup=Start-Process " + executableFilePath + @" -ArgumentList '/S /D=""C:\Program Files\Jaspersoft""' -Wait -PassThru");
-
-
-                    Collection<PSObject> PSOutput = powerShell.Invoke(); foreach (PSObject outputItem in PSOutput)
-                    {
-
-                        if (outputItem != null)
-                        {
-                            Console.WriteLine(outputItem.BaseObject.GetType().FullName);
-                            Console.WriteLine(outputItem.BaseObject.ToString() + "\n");
-                        }
-                    }
-
-                    if (powerShell.Streams.Error.Count > 0)
-                    {
-                        string temp = powerShell.Streams.Error.First().ToString();
-                        Console.WriteLine("Error: {0}", temp);
-                    }
-                    else
-                        Console.WriteLine("Installation has completed successfully.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error occured: {0}", ex.InnerException);
-                //throw;  
-            }
-            finally
-            {
-                if (powerShell != null)
-                    powerShell.Dispose();
-            }
-        }
-
         /////////////////
         //GREENSHOT//////
         /////////////////
@@ -782,6 +787,44 @@ namespace SAPSoftwareDeploymentInstaller
             }
         }
         private void ProcessFolder8()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "FileZilla*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "FileZilla*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/NCRC /S /D=%ApplicationDir%'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + filezillaInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //PUTTY//////////
+        /////////////////
+        private void DownloadCompleted9(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + filezillaInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "FileZilla")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder9();
+                }
+            }
+        }
+        private void ProcessFolder9()
         {
             //install temp user directory
             var user = Environment.UserName;
