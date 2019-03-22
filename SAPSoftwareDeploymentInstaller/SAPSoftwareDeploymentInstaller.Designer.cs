@@ -50,6 +50,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel = new System.Windows.Forms.LinkLabel();
             this.installButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.versionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.selectProgramGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -75,7 +76,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.installLogRichTextBox.Location = new System.Drawing.Point(0, 0);
             this.installLogRichTextBox.Name = "installLogRichTextBox";
             this.installLogRichTextBox.ReadOnly = true;
-            this.installLogRichTextBox.Size = new System.Drawing.Size(533, 291);
+            this.installLogRichTextBox.Size = new System.Drawing.Size(533, 286);
             this.installLogRichTextBox.TabIndex = 3;
             this.installLogRichTextBox.Text = "";
             // 
@@ -94,7 +95,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(264, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(264, 286);
             this.dataGridView1.TabIndex = 6;
             // 
             // Program
@@ -126,9 +127,9 @@ namespace SAPSoftwareDeploymentInstaller
             this.selectProgramGroupBox.Controls.Add(this.nPlusPlusCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.sevenZipCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.iReport451CheckBox);
-            this.selectProgramGroupBox.Location = new System.Drawing.Point(13, 347);
+            this.selectProgramGroupBox.Location = new System.Drawing.Point(13, 318);
             this.selectProgramGroupBox.Name = "selectProgramGroupBox";
-            this.selectProgramGroupBox.Size = new System.Drawing.Size(153, 269);
+            this.selectProgramGroupBox.Size = new System.Drawing.Size(153, 284);
             this.selectProgramGroupBox.TabIndex = 7;
             this.selectProgramGroupBox.TabStop = false;
             this.selectProgramGroupBox.Text = "Select Program";
@@ -292,7 +293,7 @@ namespace SAPSoftwareDeploymentInstaller
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.installLogRichTextBox);
-            this.splitContainer1.Size = new System.Drawing.Size(801, 291);
+            this.splitContainer1.Size = new System.Drawing.Size(801, 286);
             this.splitContainer1.SplitterDistance = 264;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -329,7 +330,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.sapLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sapLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.sapLinkLabel.Location = new System.Drawing.Point(750, 601);
+            this.sapLinkLabel.Location = new System.Drawing.Point(754, 570);
             this.sapLinkLabel.Name = "sapLinkLabel";
             this.sapLinkLabel.Size = new System.Drawing.Size(60, 16);
             this.sapLinkLabel.TabIndex = 7;
@@ -344,7 +345,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.installButton.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.Download;
             this.installButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.installButton.Location = new System.Drawing.Point(233, 526);
+            this.installButton.Location = new System.Drawing.Point(172, 511);
             this.installButton.Name = "installButton";
             this.installButton.Size = new System.Drawing.Size(68, 91);
             this.installButton.TabIndex = 0;
@@ -358,10 +359,22 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 318);
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(0, 608);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(801, 10);
+            this.progressBar1.Size = new System.Drawing.Size(826, 10);
             this.progressBar1.TabIndex = 11;
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.versionLabel.Location = new System.Drawing.Point(746, 589);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(68, 13);
+            this.versionLabel.TabIndex = 12;
+            this.versionLabel.Text = "version 1.0.1";
             // 
             // SAPSoftwareDeploymentInstaller
             // 
@@ -369,7 +382,8 @@ namespace SAPSoftwareDeploymentInstaller
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::SAPSoftwareDeploymentInstaller.Properties.Resources.lightcolorbackground;
-            this.ClientSize = new System.Drawing.Size(826, 625);
+            this.ClientSize = new System.Drawing.Size(826, 620);
+            this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.sapLinkLabel);
             this.Controls.Add(this.splitContainer1);
@@ -420,6 +434,7 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.DataGridViewTextBoxColumn Program;
         private System.Windows.Forms.DataGridViewImageColumn Downloaded;
         private System.Windows.Forms.CheckBox puttyCheckBox;
+        private System.Windows.Forms.Label versionLabel;
     }
 }
 
