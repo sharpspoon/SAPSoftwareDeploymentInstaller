@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -231,6 +231,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\putty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winscp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_check-all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_check-all %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_check-all %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_install.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_install %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_install %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonuncheckall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonuncheckall1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonuncheckall2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

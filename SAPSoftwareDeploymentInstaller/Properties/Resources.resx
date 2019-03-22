@@ -124,14 +124,17 @@
   <data name="ireport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ireport2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="winscp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\winscp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loaderGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ezgif.com-resize.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Downloadcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Downloadcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkgreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkgreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="virtualbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\virtualbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +154,23 @@
   <data name="filedownload" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filedownload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="checkgreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkgreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttoncheckall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_check-all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tinyloading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tinyloading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="jaspersoft_studio_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jaspersoft_studio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttoninstall2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_install (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttoninstall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_install.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,10 +178,28 @@
   <data name="filezilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filezilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buttoncheckall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_check-all (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lightcolorbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buttoninstall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_install (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttoncheckall2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_check-all (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="putty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\putty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonuncheckall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonuncheckall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonuncheckall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonuncheckall1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonuncheckall2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonuncheckall2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

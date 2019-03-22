@@ -63,6 +63,96 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttoncheckall {
+            get {
+                object obj = ResourceManager.GetObject("buttoncheckall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttoncheckall1 {
+            get {
+                object obj = ResourceManager.GetObject("buttoncheckall1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttoncheckall2 {
+            get {
+                object obj = ResourceManager.GetObject("buttoncheckall2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttoninstall {
+            get {
+                object obj = ResourceManager.GetObject("buttoninstall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttoninstall1 {
+            get {
+                object obj = ResourceManager.GetObject("buttoninstall1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttoninstall2 {
+            get {
+                object obj = ResourceManager.GetObject("buttoninstall2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonuncheckall {
+            get {
+                object obj = ResourceManager.GetObject("buttonuncheckall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonuncheckall1 {
+            get {
+                object obj = ResourceManager.GetObject("buttonuncheckall1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonuncheckall2 {
+            get {
+                object obj = ResourceManager.GetObject("buttonuncheckall2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checkgreen {
             get {
                 object obj = ResourceManager.GetObject("checkgreen", resourceCulture);
@@ -236,6 +326,16 @@ namespace SAPSoftwareDeploymentInstaller.Properties {
         internal static System.Drawing.Bitmap virtualbox {
             get {
                 object obj = ResourceManager.GetObject("virtualbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap winscp {
+            get {
+                object obj = ResourceManager.GetObject("winscp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

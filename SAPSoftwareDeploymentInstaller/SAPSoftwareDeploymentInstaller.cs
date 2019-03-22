@@ -189,21 +189,9 @@ namespace SAPSoftwareDeploymentInstaller
         string jaspersoftInstaller = "TIB_js-studiocomm_6.6.0_windows_x86_64.exe";
         string filezillaInstaller = "FileZilla_3.41.1_win64-setup.exe";
         string greenshotInstaller = "Greenshot-INSTALLER-1.2.10.6-RELEASE.exe";
-
-        private void installButton_MouseEnter(object sender, EventArgs e)
-        {
-            this.installButton.Image = Resources.Downloadcolor;
-        }
-
-        private void installButton_MouseLeave(object sender, EventArgs e)
-        {
-            this.installButton.Image = Resources.Download;
-        }
-
-        private void installButton_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.installButton.Image = Resources.Downloadfilled;
-        }
+        string puttyInstaller = "putty-64bit-0.71-installer.msi";
+        string winscpInstaller = "WinSCP-5.13.9-Setup.exe";
+        
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -512,18 +500,18 @@ namespace SAPSoftwareDeploymentInstaller
             /////////////////
             if (puttyCheckBox.Checked == true)
             {
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + filezillaInstaller + " ....");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + puttyInstaller + " ....");
 
                 using (WebClient wc = new WebClient())
                 {
                     wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                     wc.DownloadFileAsync(
                         // Param1 = Link of file
-                        new System.Uri("https://wardr.net/sapsdi/putty/" + filezillaInstaller),
+                        new System.Uri("https://wardr.net/sapsdi/putty/" + puttyInstaller),
                         // Param2 = Path to save
-                        userDir + @"\" + filezillaInstaller
+                        userDir + @"\" + puttyInstaller
                     );
-                    wc.DownloadFileCompleted += DownloadCompleted8;
+                    wc.DownloadFileCompleted += DownloadCompleted9;
                 }
             }
             //System.IO.Directory.Delete(userDir);
@@ -814,10 +802,10 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         private void DownloadCompleted9(object sender, AsyncCompletedEventArgs e)
         {
-            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + filezillaInstaller + " ....Done.");
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + puttyInstaller + " ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if (row.Cells[0].Value.ToString() == "FileZilla")
+                if (row.Cells[0].Value.ToString() == "PuTTY")
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder9();
@@ -830,20 +818,20 @@ namespace SAPSoftwareDeploymentInstaller
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
 
-            if (Directory.GetFiles(userDir, "FileZilla*.exe").Length > 0)
+            if (Directory.GetFiles(userDir, "putty*.msi").Length > 0)
             {
                 //int count = Directory.GetFiles(userDir, "*.*").Length;
-                string[] files = Directory.GetFiles(userDir, "FileZilla*.exe*");
+                string[] files = Directory.GetFiles(userDir, "putty*.msi*");
 
                 foreach (var file in files)
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
-                    var argumentList = @"'/NCRC /S /D=%ApplicationDir%'";
+                    var argumentList = @"/qn";
                     //Deploy application  
                     DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + filezillaInstaller + " ....Done.");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + puttyInstaller + " ....Done.");
             }
         }
 
@@ -886,6 +874,92 @@ namespace SAPSoftwareDeploymentInstaller
                 if (powerShell != null)
                     powerShell.Dispose();
             }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            this.checkAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoncheckall1));
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            this.checkAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoncheckall));
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.checkAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoncheckall2));
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.checkAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoncheckall1));
+        }
+
+        private void checkAllPictureBox_Click(object sender, EventArgs e)
+        {
+            iReport451CheckBox.Checked = true;
+            sevenZipCheckBox.Checked = true;
+            nPlusPlusCheckBox.Checked = true;
+            virtualBoxCheckBox.Checked = true;
+            jaspersoftStudioCheckBox.Checked = true;
+            greenshotCheckBox.Checked = true;
+            filezillaCheckBox.Checked = true;
+            puttyCheckBox.Checked = true;
+            winSCPCheckBox.Checked = true;
+        }
+
+        private void installPictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.installPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoninstall2));
+        }
+
+        private void installPictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.installPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoninstall1));
+        }
+
+        private void installPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.installPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoninstall));
+        }
+
+        private void installPictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.installPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttoninstall1));
+        }
+
+        private void uncheckAllPictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.uncheckAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttonuncheckall2));
+        }
+
+        private void uncheckAllPictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.uncheckAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttonuncheckall1));
+        }
+
+        private void uncheckAllPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.uncheckAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttonuncheckall));
+        }
+
+        private void uncheckAllPictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.uncheckAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttonuncheckall1));
+        }
+
+        private void uncheckAllPictureBox_Click(object sender, EventArgs e)
+        {
+            iReport451CheckBox.Checked = false;
+            sevenZipCheckBox.Checked = false;
+            nPlusPlusCheckBox.Checked = false;
+            virtualBoxCheckBox.Checked = false;
+            jaspersoftStudioCheckBox.Checked = false;
+            greenshotCheckBox.Checked = false;
+            filezillaCheckBox.Checked = false;
+            puttyCheckBox.Checked = false;
+            winSCPCheckBox.Checked = false;
         }
     }
 }

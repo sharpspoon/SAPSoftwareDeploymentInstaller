@@ -35,6 +35,7 @@ namespace SAPSoftwareDeploymentInstaller
             this.Program = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Downloaded = new System.Windows.Forms.DataGridViewImageColumn();
             this.selectProgramGroupBox = new System.Windows.Forms.GroupBox();
+            this.winSCPCheckBox = new System.Windows.Forms.CheckBox();
             this.puttyCheckBox = new System.Windows.Forms.CheckBox();
             this.filezillaCheckBox = new System.Windows.Forms.CheckBox();
             this.greenshotCheckBox = new System.Windows.Forms.CheckBox();
@@ -48,9 +49,11 @@ namespace SAPSoftwareDeploymentInstaller
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sapLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.installButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.versionLabel = new System.Windows.Forms.Label();
+            this.checkAllPictureBox = new System.Windows.Forms.PictureBox();
+            this.installPictureBox = new System.Windows.Forms.PictureBox();
+            this.uncheckAllPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.selectProgramGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -58,6 +61,9 @@ namespace SAPSoftwareDeploymentInstaller
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkAllPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.installPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uncheckAllPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdBuilderRichTextBox
@@ -119,6 +125,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             this.selectProgramGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.selectProgramGroupBox.BackColor = System.Drawing.Color.Transparent;
+            this.selectProgramGroupBox.Controls.Add(this.winSCPCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.puttyCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.filezillaCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.greenshotCheckBox);
@@ -133,6 +140,20 @@ namespace SAPSoftwareDeploymentInstaller
             this.selectProgramGroupBox.TabIndex = 7;
             this.selectProgramGroupBox.TabStop = false;
             this.selectProgramGroupBox.Text = "Select Program";
+            // 
+            // winSCPCheckBox
+            // 
+            this.winSCPCheckBox.AutoSize = true;
+            this.winSCPCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.winSCPCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winSCPCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.winscp;
+            this.winSCPCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.winSCPCheckBox.Location = new System.Drawing.Point(0, 258);
+            this.winSCPCheckBox.Name = "winSCPCheckBox";
+            this.winSCPCheckBox.Size = new System.Drawing.Size(149, 24);
+            this.winSCPCheckBox.TabIndex = 11;
+            this.winSCPCheckBox.Text = "         WinSCP                   ";
+            this.winSCPCheckBox.UseVisualStyleBackColor = true;
             // 
             // puttyCheckBox
             // 
@@ -338,25 +359,6 @@ namespace SAPSoftwareDeploymentInstaller
             this.sapLinkLabel.Text = "sap.com";
             this.sapLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.sapLinkLabel_LinkClicked);
             // 
-            // installButton
-            // 
-            this.installButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.installButton.BackColor = System.Drawing.Color.Honeydew;
-            this.installButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.installButton.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.Download;
-            this.installButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.installButton.Location = new System.Drawing.Point(172, 511);
-            this.installButton.Name = "installButton";
-            this.installButton.Size = new System.Drawing.Size(68, 91);
-            this.installButton.TabIndex = 0;
-            this.installButton.Text = "Install SAP Package";
-            this.installButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.installButton.UseVisualStyleBackColor = false;
-            this.installButton.Click += new System.EventHandler(this.installButton_Click);
-            this.installButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.installButton_MouseDown);
-            this.installButton.MouseEnter += new System.EventHandler(this.installButton_MouseEnter);
-            this.installButton.MouseLeave += new System.EventHandler(this.installButton_MouseLeave);
-            // 
             // progressBar1
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -376,20 +378,66 @@ namespace SAPSoftwareDeploymentInstaller
             this.versionLabel.TabIndex = 12;
             this.versionLabel.Text = "version 1.0.1";
             // 
+            // checkAllPictureBox
+            // 
+            this.checkAllPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.checkAllPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.buttoncheckall;
+            this.checkAllPictureBox.Location = new System.Drawing.Point(172, 318);
+            this.checkAllPictureBox.Name = "checkAllPictureBox";
+            this.checkAllPictureBox.Size = new System.Drawing.Size(123, 38);
+            this.checkAllPictureBox.TabIndex = 14;
+            this.checkAllPictureBox.TabStop = false;
+            this.checkAllPictureBox.Click += new System.EventHandler(this.checkAllPictureBox_Click);
+            this.checkAllPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.checkAllPictureBox.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.checkAllPictureBox.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.checkAllPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            // 
+            // installPictureBox
+            // 
+            this.installPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.installPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.buttoninstall;
+            this.installPictureBox.Location = new System.Drawing.Point(172, 564);
+            this.installPictureBox.Name = "installPictureBox";
+            this.installPictureBox.Size = new System.Drawing.Size(95, 38);
+            this.installPictureBox.TabIndex = 15;
+            this.installPictureBox.TabStop = false;
+            this.installPictureBox.Click += new System.EventHandler(this.installButton_Click);
+            this.installPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.installPictureBox_MouseDown);
+            this.installPictureBox.MouseEnter += new System.EventHandler(this.installPictureBox_MouseEnter);
+            this.installPictureBox.MouseLeave += new System.EventHandler(this.installPictureBox_MouseLeave);
+            this.installPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.installPictureBox_MouseUp);
+            // 
+            // uncheckAllPictureBox
+            // 
+            this.uncheckAllPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.uncheckAllPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.buttonuncheckall;
+            this.uncheckAllPictureBox.Location = new System.Drawing.Point(172, 362);
+            this.uncheckAllPictureBox.Name = "uncheckAllPictureBox";
+            this.uncheckAllPictureBox.Size = new System.Drawing.Size(156, 40);
+            this.uncheckAllPictureBox.TabIndex = 16;
+            this.uncheckAllPictureBox.TabStop = false;
+            this.uncheckAllPictureBox.Click += new System.EventHandler(this.uncheckAllPictureBox_Click);
+            this.uncheckAllPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.uncheckAllPictureBox_MouseDown);
+            this.uncheckAllPictureBox.MouseEnter += new System.EventHandler(this.uncheckAllPictureBox_MouseEnter);
+            this.uncheckAllPictureBox.MouseLeave += new System.EventHandler(this.uncheckAllPictureBox_MouseLeave);
+            this.uncheckAllPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.uncheckAllPictureBox_MouseUp);
+            // 
             // SAPSoftwareDeploymentInstaller
             // 
-            this.AcceptButton = this.installButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::SAPSoftwareDeploymentInstaller.Properties.Resources.lightcolorbackground;
             this.ClientSize = new System.Drawing.Size(826, 620);
+            this.Controls.Add(this.uncheckAllPictureBox);
+            this.Controls.Add(this.installPictureBox);
+            this.Controls.Add(this.checkAllPictureBox);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.sapLinkLabel);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.selectProgramGroupBox);
             this.Controls.Add(this.cmdBuilderRichTextBox);
-            this.Controls.Add(this.installButton);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -406,14 +454,15 @@ namespace SAPSoftwareDeploymentInstaller
             this.splitContainer1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkAllPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.installPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uncheckAllPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button installButton;
         private System.Windows.Forms.CheckBox sevenZipCheckBox;
         private System.Windows.Forms.RichTextBox cmdBuilderRichTextBox;
         private System.Windows.Forms.RichTextBox installLogRichTextBox;
@@ -435,6 +484,10 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.DataGridViewImageColumn Downloaded;
         private System.Windows.Forms.CheckBox puttyCheckBox;
         private System.Windows.Forms.Label versionLabel;
+        private System.Windows.Forms.CheckBox winSCPCheckBox;
+        private System.Windows.Forms.PictureBox checkAllPictureBox;
+        private System.Windows.Forms.PictureBox installPictureBox;
+        private System.Windows.Forms.PictureBox uncheckAllPictureBox;
     }
 }
 
