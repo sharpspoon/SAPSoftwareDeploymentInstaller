@@ -37,7 +37,35 @@ namespace SAPSoftwareDeploymentInstaller
         private void installButton_Click(object sender, EventArgs e)
         {
             //check if any software is selected
-            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false && jaspersoftStudioCheckBox.Checked == false && greenshotCheckBox.Checked == false && filezillaCheckBox.Checked == false && puttyCheckBox.Checked == false && winSCPCheckBox.Checked == false)
+            if (iReport451CheckBox.Checked == false && 
+                sevenZipCheckBox.Checked == false && 
+                nPlusPlusCheckBox.Checked == false && 
+                virtualBoxCheckBox.Checked == false && 
+                jaspersoftStudioCheckBox.Checked == false && 
+                greenshotCheckBox.Checked == false && 
+                filezillaCheckBox.Checked == false && 
+                puttyCheckBox.Checked == false && 
+                winSCPCheckBox.Checked == false &&
+                autoHotkeyCheckBox.Checked == false &&
+                beyondCompareCheckBox.Checked == false &&
+                evernoteCheckBox.Checked == false &&
+                lightshotCheckBox.Checked == false &&
+                mailbirdCheckBox.Checked == false &&
+                snagitCheckBox.Checked == false &&
+                postmanCheckBox.Checked == false &&
+                screenpressoCheckBox.Checked == false &&
+                slackCheckBox.Checked == false &&
+                chromeCheckBox.Checked == false &&
+                oracleCheckBox.Checked == false &&
+                soapCheckBox.Checked == false &&
+                sublimeCheckBox.Checked == false &&
+                textpadCheckBox.Checked == false &&
+                toadCheckBox.Checked == false &&
+                tomcatCheckBox.Checked == false &&
+                trelloCheckBox.Checked == false &&
+                visioCheckBox.Checked == false &&
+                vscodeCheckBox.Checked == false &&
+                winmergeCheckBox.Checked == false)
             {
                 MessageBox.Show("Must select at least one program to install.", "SAP Software Deployment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -139,6 +167,166 @@ namespace SAPSoftwareDeploymentInstaller
             if (winSCPCheckBox.Checked == true)
             {
                 dataGridView1.Rows.Add("WinSCP", Resources.filedownload);
+            }
+
+            /////////////////
+            //AUTOHOTKEY/////
+            /////////////////
+            if (autoHotkeyCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("AutoHotkey", Resources.filedownload);
+            }
+
+            /////////////////
+            //BEYONDCOMPARE//
+            /////////////////
+            if (beyondCompareCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Beyond Compare", Resources.filedownload);
+            }
+
+            /////////////////
+            //EVERNOTE///////
+            /////////////////
+            if (evernoteCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Evernote", Resources.filedownload);
+            }
+
+            /////////////////
+            //LIGHTSHOT//////
+            /////////////////
+            if (lightshotCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Lightshot", Resources.filedownload);
+            }
+
+            /////////////////
+            //MAILBIRD///////
+            /////////////////
+            if (mailbirdCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Mail Bird", Resources.filedownload);
+            }
+
+            /////////////////
+            //SNAGIT/////////
+            /////////////////
+            if (snagitCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Snag-It", Resources.filedownload);
+            }
+
+            /////////////////
+            //POSTMAN////////
+            /////////////////
+            if (postmanCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Postman", Resources.filedownload);
+            }
+
+            /////////////////
+            //SCREENPRESSO///
+            /////////////////
+            if (screenpressoCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("ScreenPresso", Resources.filedownload);
+            }
+
+            /////////////////
+            //SLACK//////////
+            /////////////////
+            if (slackCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Slack", Resources.filedownload);
+            }
+
+            /////////////////
+            //CHROME/////////
+            /////////////////
+            if (chromeCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Chrome", Resources.filedownload);
+            }
+
+            /////////////////
+            //ORACLE/////////
+            /////////////////
+            if (oracleCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Oracle", Resources.filedownload);
+            }
+
+            /////////////////
+            //SOAPUI/////////
+            /////////////////
+            if (soapCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Soap UI", Resources.filedownload);
+            }
+
+            /////////////////
+            //SUBLIME////////
+            /////////////////
+            if (sublimeCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Sublime", Resources.filedownload);
+            }
+
+            /////////////////
+            //TEXTPAD////////
+            /////////////////
+            if (textpadCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("TextPad", Resources.filedownload);
+            }
+
+            /////////////////
+            //TOAD///////////
+            /////////////////
+            if (toadCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Toad", Resources.filedownload);
+            }
+
+            /////////////////
+            //TOMCAT/////////
+            /////////////////
+            if (tomcatCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("TomCat", Resources.filedownload);
+            }
+
+            /////////////////
+            //TRELLO/////////
+            /////////////////
+            if (trelloCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Trello", Resources.filedownload);
+            }
+
+            /////////////////
+            //VISIO//////////
+            /////////////////
+            if (visioCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Visio", Resources.filedownload);
+            }
+
+            /////////////////
+            //VSCODE/////////
+            /////////////////
+            if (vscodeCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("VS Code", Resources.filedownload);
+            }
+
+            /////////////////
+            //WINMERGE///////
+            /////////////////
+            if (winmergeCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("Winmerge", Resources.filedownload);
             }
 
             //////////////////////////////////
@@ -759,6 +947,9 @@ namespace SAPSoftwareDeploymentInstaller
             }
         }
 
+        ///////////////////////////////////
+        //END OF DOWNLOADINSTALL LOGIC/////
+        ///////////////////////////////////
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -816,6 +1007,59 @@ namespace SAPSoftwareDeploymentInstaller
             filezillaCheckBox.Checked = true;
             puttyCheckBox.Checked = true;
             winSCPCheckBox.Checked = true;
+            autoHotkeyCheckBox.Checked = true;
+            beyondCompareCheckBox.Checked = true;
+            evernoteCheckBox.Checked = true;
+            lightshotCheckBox.Checked = true;
+            mailbirdCheckBox.Checked = true;
+            snagitCheckBox.Checked = true;
+            postmanCheckBox.Checked = true;
+            screenpressoCheckBox.Checked = true;
+            slackCheckBox.Checked = true;
+            chromeCheckBox.Checked = true;
+            oracleCheckBox.Checked = true;
+            soapCheckBox.Checked = true;
+            sublimeCheckBox.Checked = true;
+            textpadCheckBox.Checked = true;
+            toadCheckBox.Checked = true;
+            tomcatCheckBox.Checked = true;
+            trelloCheckBox.Checked = true;
+            visioCheckBox.Checked = true;
+            vscodeCheckBox.Checked = true;
+            winmergeCheckBox.Checked = true;
+        }
+
+        private void uncheckAllPictureBox_Click(object sender, EventArgs e)
+        {
+            iReport451CheckBox.Checked = false;
+            sevenZipCheckBox.Checked = false;
+            nPlusPlusCheckBox.Checked = false;
+            virtualBoxCheckBox.Checked = false;
+            jaspersoftStudioCheckBox.Checked = false;
+            greenshotCheckBox.Checked = false;
+            filezillaCheckBox.Checked = false;
+            puttyCheckBox.Checked = false;
+            winSCPCheckBox.Checked = false;
+            autoHotkeyCheckBox.Checked = false;
+            beyondCompareCheckBox.Checked = false;
+            evernoteCheckBox.Checked = false;
+            lightshotCheckBox.Checked = false;
+            mailbirdCheckBox.Checked = false;
+            snagitCheckBox.Checked = false;
+            postmanCheckBox.Checked = false;
+            screenpressoCheckBox.Checked = false;
+            slackCheckBox.Checked = false;
+            chromeCheckBox.Checked = false;
+            oracleCheckBox.Checked = false;
+            soapCheckBox.Checked = false;
+            sublimeCheckBox.Checked = false;
+            textpadCheckBox.Checked = false;
+            toadCheckBox.Checked = false;
+            tomcatCheckBox.Checked = false;
+            trelloCheckBox.Checked = false;
+            visioCheckBox.Checked = false;
+            vscodeCheckBox.Checked = false;
+            winmergeCheckBox.Checked = false;
         }
 
         private void installPictureBox_MouseDown(object sender, MouseEventArgs e)
@@ -856,19 +1100,6 @@ namespace SAPSoftwareDeploymentInstaller
         private void uncheckAllPictureBox_MouseUp(object sender, MouseEventArgs e)
         {
             this.uncheckAllPictureBox.Image = ((System.Drawing.Image)(Properties.Resources.buttonuncheckall1));
-        }
-
-        private void uncheckAllPictureBox_Click(object sender, EventArgs e)
-        {
-            iReport451CheckBox.Checked = false;
-            sevenZipCheckBox.Checked = false;
-            nPlusPlusCheckBox.Checked = false;
-            virtualBoxCheckBox.Checked = false;
-            jaspersoftStudioCheckBox.Checked = false;
-            greenshotCheckBox.Checked = false;
-            filezillaCheckBox.Checked = false;
-            puttyCheckBox.Checked = false;
-            winSCPCheckBox.Checked = false;
         }
 
         private void iReport451CheckBox_MouseEnter(object sender, EventArgs e)
@@ -1053,402 +1284,402 @@ namespace SAPSoftwareDeploymentInstaller
 
         private void autoHotkeyCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.autoHotkeyCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void autoHotkeyCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.autoHotkeyCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void autoHotkeyCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.autoHotkeyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void autoHotkeyCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.autoHotkeyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void beyondCompareCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.beyondCompareCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void beyondCompareCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.beyondCompareCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void beyondCompareCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.beyondCompareCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void beyondCompareCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.beyondCompareCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void evernoteCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.evernoteCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void evernoteCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.evernoteCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void evernoteCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.evernoteCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void evernoteCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.evernoteCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void lightshotCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.lightshotCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void lightshotCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.lightshotCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void lightshotCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.lightshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void lightshotCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.lightshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void mailbirdCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.mailbirdCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void mailbirdCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.mailbirdCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void mailbirdCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.mailbirdCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void mailbirdCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.mailbirdCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void snagitCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.snagitCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void snagitCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.snagitCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void snagitCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.snagitCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void snagitCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.snagitCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void postmanCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.postmanCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void postmanCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.postmanCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void postmanCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.postmanCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void postmanCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.postmanCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void screenpressoCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.screenpressoCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void screenpressoCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.screenpressoCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void screenpressoCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.screenpressoCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void screenpressoCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.screenpressoCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void slackCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.slackCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void slackCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.slackCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void slackCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.slackCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void slackCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.slackCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void chromeCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.chromeCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void chromeCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.chromeCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void chromeCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.chromeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void chromeCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.chromeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void oracleCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.oracleCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void oracleCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.oracleCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void oracleCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.oracleCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void oracleCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.oracleCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void soapCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.soapCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void soapCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.soapCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void soapCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.soapCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void soapCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.soapCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void sublimeCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.sublimeCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void sublimeCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.sublimeCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void sublimeCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.sublimeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void sublimeCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.sublimeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void textpadCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.textpadCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void textpadCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.textpadCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void textpadCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.textpadCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void textpadCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.textpadCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void toadCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.toadCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void toadCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.toadCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void toadCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.toadCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void toadCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.toadCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void tomcatCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.tomcatCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void tomcatCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.tomcatCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void tomcatCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.tomcatCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void tomcatCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.tomcatCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void trelloCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.trelloCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void trelloCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.trelloCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void trelloCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.trelloCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void trelloCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.trelloCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void visioCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.visioCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void visioCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.visioCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void visioCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.visioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void visioCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.visioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void vscodeCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.vscodeCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void vscodeCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.vscodeCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void vscodeCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.vscodeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void vscodeCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.vscodeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void winmergeCheckBox_MouseDown(object sender, MouseEventArgs e)
         {
-
+            this.winmergeCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
         }
 
         private void winmergeCheckBox_MouseEnter(object sender, EventArgs e)
         {
-
+            this.winmergeCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
         }
 
         private void winmergeCheckBox_MouseLeave(object sender, EventArgs e)
         {
-
+            this.winmergeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
 
         private void winmergeCheckBox_MouseUp(object sender, MouseEventArgs e)
         {
-
+            this.winmergeCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
     }
 }
