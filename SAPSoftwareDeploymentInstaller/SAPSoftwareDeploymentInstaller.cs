@@ -350,7 +350,7 @@ namespace SAPSoftwareDeploymentInstaller
                         // Param2 = Path to save
                         userDir + @"\" + winscpInstaller
                     );
-                    wc.DownloadFileCompleted += DownloadCompleted9;
+                    wc.DownloadFileCompleted += DownloadCompleted10;
                 }
             }
             //System.IO.Directory.Delete(userDir);
@@ -682,10 +682,10 @@ namespace SAPSoftwareDeploymentInstaller
         /////////////////
         private void DownloadCompleted10(object sender, AsyncCompletedEventArgs e)
         {
-            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + puttyInstaller + " ....Done.");
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if (row.Cells[0].Value.ToString() == "PuTTY")
+                if (row.Cells[0].Value.ToString() == "WinSCP")
                 {
                     row.Cells[1].Value = Resources.checkgreen;
                     ProcessFolder10();
@@ -698,20 +698,20 @@ namespace SAPSoftwareDeploymentInstaller
             var user = Environment.UserName;
             var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
 
-            if (Directory.GetFiles(userDir, "putty*.msi").Length > 0)
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
             {
                 //int count = Directory.GetFiles(userDir, "*.*").Length;
-                string[] files = Directory.GetFiles(userDir, "putty*.msi*");
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
 
                 foreach (var file in files)
                 {
                     var fileName = System.IO.Path.GetFileName(file);
                     var fileNameWithPath = userDir + "\\" + fileName;
-                    var argumentList = @"/qn";
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
                     //Deploy application  
                     DeployApplications(fileNameWithPath, fileName, argumentList);
                 }
-                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + puttyInstaller + " ....Done.");
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
             }
         }
 
