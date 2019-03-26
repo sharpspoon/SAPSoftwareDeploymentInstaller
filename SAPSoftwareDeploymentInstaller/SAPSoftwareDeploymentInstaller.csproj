@@ -262,5 +262,65 @@
   <ItemGroup>
     <None Include="Resources\buttonuncheckall2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autohotkey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyondcompare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evernote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailbird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snagit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenpresso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oracle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soap.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sublime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textpad.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomcat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trello.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vscode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winmerge.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

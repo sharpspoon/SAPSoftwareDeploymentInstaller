@@ -118,6 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tomcat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomcat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beyondcompare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beyondcompare.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ireport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ireport1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkgreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkgreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="greenshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greenshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jaspersoft_studio_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jaspersoft_studio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttoninstall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_install (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vscode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vscode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttoncheckall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_check-all (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lightshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lightshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lightcolorbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filedownload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filedownload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sevenzip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7zip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,79 +166,100 @@
   <data name="winscp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\winscp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="screenpresso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\screenpresso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sublime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sublime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="autohotkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\autohotkey.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="putty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\putty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttoninstall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_install.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="npp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\n++.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loaderGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ezgif.com-resize.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Downloadcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Downloadcolor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="checkgreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkgreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="virtualbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\virtualbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ireport" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ireport1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="greenshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\greenshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="npp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\n++.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Downloadfilled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Downloadfilled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filedownload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filedownload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buttoncheckall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_check-all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tinyloading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tinyloading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jaspersoft_studio_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jaspersoft_studio_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buttoninstall2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_install (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buttoninstall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_install.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filezilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filezilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buttoncheckall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_check-all (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lightcolorbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buttoninstall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button_install (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttoncheckall2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_check-all (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="putty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\putty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttoncheckall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button_check-all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="textpad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\textpad.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oracle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oracle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="postman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\postman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="visio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\visio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="virtualbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\virtualbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mailbird" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mailbird.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snagit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snagit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Downloadfilled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Downloadfilled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chrome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chrome.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonuncheckall2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonuncheckall2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonuncheckall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonuncheckall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soap.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trello" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tinyloading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tinyloading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buttonuncheckall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonuncheckall1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonuncheckall2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonuncheckall2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="evernote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\evernote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filezilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filezilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="winmerge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\winmerge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

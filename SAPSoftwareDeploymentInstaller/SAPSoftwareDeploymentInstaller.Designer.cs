@@ -34,6 +34,26 @@ namespace SAPSoftwareDeploymentInstaller
             this.Program = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Downloaded = new System.Windows.Forms.DataGridViewImageColumn();
             this.selectProgramGroupBox = new System.Windows.Forms.GroupBox();
+            this.chromeCheckBox = new System.Windows.Forms.CheckBox();
+            this.oracleCheckBox = new System.Windows.Forms.CheckBox();
+            this.soapCheckBox = new System.Windows.Forms.CheckBox();
+            this.sublimeCheckBox = new System.Windows.Forms.CheckBox();
+            this.textpadCheckBox = new System.Windows.Forms.CheckBox();
+            this.tomcatCheckBox = new System.Windows.Forms.CheckBox();
+            this.trelloCheckBox = new System.Windows.Forms.CheckBox();
+            this.visioCheckBox = new System.Windows.Forms.CheckBox();
+            this.vscodeCheckBox = new System.Windows.Forms.CheckBox();
+            this.winmergeCheckBox = new System.Windows.Forms.CheckBox();
+            this.toadCheckBox = new System.Windows.Forms.CheckBox();
+            this.beyondCompareCheckBox = new System.Windows.Forms.CheckBox();
+            this.autoHotkeyCheckBox = new System.Windows.Forms.CheckBox();
+            this.evernoteCheckBox = new System.Windows.Forms.CheckBox();
+            this.screenpressoCheckBox = new System.Windows.Forms.CheckBox();
+            this.postmanCheckBox = new System.Windows.Forms.CheckBox();
+            this.lightshotCheckBox = new System.Windows.Forms.CheckBox();
+            this.mailbirdCheckBox = new System.Windows.Forms.CheckBox();
+            this.slackCheckBox = new System.Windows.Forms.CheckBox();
+            this.snagitCheckBox = new System.Windows.Forms.CheckBox();
             this.winSCPCheckBox = new System.Windows.Forms.CheckBox();
             this.puttyCheckBox = new System.Windows.Forms.CheckBox();
             this.filezillaCheckBox = new System.Windows.Forms.CheckBox();
@@ -53,26 +73,6 @@ namespace SAPSoftwareDeploymentInstaller
             this.checkAllPictureBox = new System.Windows.Forms.PictureBox();
             this.installPictureBox = new System.Windows.Forms.PictureBox();
             this.uncheckAllPictureBox = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.selectProgramGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -136,26 +136,26 @@ namespace SAPSoftwareDeploymentInstaller
             this.selectProgramGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectProgramGroupBox.BackColor = System.Drawing.Color.Transparent;
-            this.selectProgramGroupBox.Controls.Add(this.checkBox27);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox26);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox25);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox24);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox23);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox21);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox20);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox19);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox18);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox17);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox22);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox9);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox8);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox7);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox6);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox5);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox4);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox3);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox2);
-            this.selectProgramGroupBox.Controls.Add(this.checkBox1);
+            this.selectProgramGroupBox.Controls.Add(this.chromeCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.oracleCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.soapCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.sublimeCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.textpadCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.tomcatCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.trelloCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.visioCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.vscodeCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.winmergeCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.toadCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.beyondCompareCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.autoHotkeyCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.evernoteCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.screenpressoCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.postmanCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.lightshotCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.mailbirdCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.slackCheckBox);
+            this.selectProgramGroupBox.Controls.Add(this.snagitCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.winSCPCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.puttyCheckBox);
             this.selectProgramGroupBox.Controls.Add(this.filezillaCheckBox);
@@ -171,6 +171,366 @@ namespace SAPSoftwareDeploymentInstaller
             this.selectProgramGroupBox.TabIndex = 7;
             this.selectProgramGroupBox.TabStop = false;
             this.selectProgramGroupBox.Text = "Select Program";
+            // 
+            // chromeCheckBox
+            // 
+            this.chromeCheckBox.AutoSize = true;
+            this.chromeCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chromeCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chromeCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.chrome;
+            this.chromeCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chromeCheckBox.Location = new System.Drawing.Point(156, 138);
+            this.chromeCheckBox.Name = "chromeCheckBox";
+            this.chromeCheckBox.Size = new System.Drawing.Size(97, 24);
+            this.chromeCheckBox.TabIndex = 38;
+            this.chromeCheckBox.Text = "         Chrome ";
+            this.chromeCheckBox.UseVisualStyleBackColor = true;
+            this.chromeCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chromeCheckBox_MouseDown);
+            this.chromeCheckBox.MouseEnter += new System.EventHandler(this.chromeCheckBox_MouseEnter);
+            this.chromeCheckBox.MouseLeave += new System.EventHandler(this.chromeCheckBox_MouseLeave);
+            this.chromeCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.chromeCheckBox_MouseUp);
+            // 
+            // oracleCheckBox
+            // 
+            this.oracleCheckBox.AutoSize = true;
+            this.oracleCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oracleCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oracleCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.oracle;
+            this.oracleCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.oracleCheckBox.Location = new System.Drawing.Point(156, 168);
+            this.oracleCheckBox.Name = "oracleCheckBox";
+            this.oracleCheckBox.Size = new System.Drawing.Size(91, 24);
+            this.oracleCheckBox.TabIndex = 37;
+            this.oracleCheckBox.Text = "         Oracle  ";
+            this.oracleCheckBox.UseVisualStyleBackColor = true;
+            this.oracleCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.oracleCheckBox_MouseDown);
+            this.oracleCheckBox.MouseEnter += new System.EventHandler(this.oracleCheckBox_MouseEnter);
+            this.oracleCheckBox.MouseLeave += new System.EventHandler(this.oracleCheckBox_MouseLeave);
+            this.oracleCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.oracleCheckBox_MouseUp);
+            // 
+            // soapCheckBox
+            // 
+            this.soapCheckBox.AutoSize = true;
+            this.soapCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.soapCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soapCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.soap;
+            this.soapCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.soapCheckBox.Location = new System.Drawing.Point(156, 198);
+            this.soapCheckBox.Name = "soapCheckBox";
+            this.soapCheckBox.Size = new System.Drawing.Size(96, 24);
+            this.soapCheckBox.TabIndex = 36;
+            this.soapCheckBox.Text = "         Soap UI  ";
+            this.soapCheckBox.UseVisualStyleBackColor = true;
+            this.soapCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.soapCheckBox_MouseDown);
+            this.soapCheckBox.MouseEnter += new System.EventHandler(this.soapCheckBox_MouseEnter);
+            this.soapCheckBox.MouseLeave += new System.EventHandler(this.soapCheckBox_MouseLeave);
+            this.soapCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.soapCheckBox_MouseUp);
+            // 
+            // sublimeCheckBox
+            // 
+            this.sublimeCheckBox.AutoSize = true;
+            this.sublimeCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sublimeCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sublimeCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.sublime;
+            this.sublimeCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sublimeCheckBox.Location = new System.Drawing.Point(156, 228);
+            this.sublimeCheckBox.Name = "sublimeCheckBox";
+            this.sublimeCheckBox.Size = new System.Drawing.Size(103, 24);
+            this.sublimeCheckBox.TabIndex = 35;
+            this.sublimeCheckBox.Text = "         Sublime   ";
+            this.sublimeCheckBox.UseVisualStyleBackColor = true;
+            this.sublimeCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.sublimeCheckBox_MouseDown);
+            this.sublimeCheckBox.MouseEnter += new System.EventHandler(this.sublimeCheckBox_MouseEnter);
+            this.sublimeCheckBox.MouseLeave += new System.EventHandler(this.sublimeCheckBox_MouseLeave);
+            this.sublimeCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.sublimeCheckBox_MouseUp);
+            // 
+            // textpadCheckBox
+            // 
+            this.textpadCheckBox.AutoSize = true;
+            this.textpadCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.textpadCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textpadCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.textpad;
+            this.textpadCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.textpadCheckBox.Location = new System.Drawing.Point(156, 258);
+            this.textpadCheckBox.Name = "textpadCheckBox";
+            this.textpadCheckBox.Size = new System.Drawing.Size(99, 24);
+            this.textpadCheckBox.TabIndex = 34;
+            this.textpadCheckBox.Text = "         Textpad  ";
+            this.textpadCheckBox.UseVisualStyleBackColor = true;
+            this.textpadCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textpadCheckBox_MouseDown);
+            this.textpadCheckBox.MouseEnter += new System.EventHandler(this.textpadCheckBox_MouseEnter);
+            this.textpadCheckBox.MouseLeave += new System.EventHandler(this.textpadCheckBox_MouseLeave);
+            this.textpadCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.textpadCheckBox_MouseUp);
+            // 
+            // tomcatCheckBox
+            // 
+            this.tomcatCheckBox.AutoSize = true;
+            this.tomcatCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tomcatCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tomcatCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.tomcat;
+            this.tomcatCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tomcatCheckBox.Location = new System.Drawing.Point(156, 318);
+            this.tomcatCheckBox.Name = "tomcatCheckBox";
+            this.tomcatCheckBox.Size = new System.Drawing.Size(95, 24);
+            this.tomcatCheckBox.TabIndex = 32;
+            this.tomcatCheckBox.Text = "         Tomcat  ";
+            this.tomcatCheckBox.UseVisualStyleBackColor = true;
+            this.tomcatCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tomcatCheckBox_MouseDown);
+            this.tomcatCheckBox.MouseEnter += new System.EventHandler(this.tomcatCheckBox_MouseEnter);
+            this.tomcatCheckBox.MouseLeave += new System.EventHandler(this.tomcatCheckBox_MouseLeave);
+            this.tomcatCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tomcatCheckBox_MouseUp);
+            // 
+            // trelloCheckBox
+            // 
+            this.trelloCheckBox.AutoSize = true;
+            this.trelloCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.trelloCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trelloCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.trello;
+            this.trelloCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.trelloCheckBox.Location = new System.Drawing.Point(156, 348);
+            this.trelloCheckBox.Name = "trelloCheckBox";
+            this.trelloCheckBox.Size = new System.Drawing.Size(86, 24);
+            this.trelloCheckBox.TabIndex = 31;
+            this.trelloCheckBox.Text = "         Trello  ";
+            this.trelloCheckBox.UseVisualStyleBackColor = true;
+            this.trelloCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trelloCheckBox_MouseDown);
+            this.trelloCheckBox.MouseEnter += new System.EventHandler(this.trelloCheckBox_MouseEnter);
+            this.trelloCheckBox.MouseLeave += new System.EventHandler(this.trelloCheckBox_MouseLeave);
+            this.trelloCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trelloCheckBox_MouseUp);
+            // 
+            // visioCheckBox
+            // 
+            this.visioCheckBox.AutoSize = true;
+            this.visioCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.visioCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.visioCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.visio;
+            this.visioCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.visioCheckBox.Location = new System.Drawing.Point(156, 378);
+            this.visioCheckBox.Name = "visioCheckBox";
+            this.visioCheckBox.Size = new System.Drawing.Size(82, 24);
+            this.visioCheckBox.TabIndex = 30;
+            this.visioCheckBox.Text = "         Visio  ";
+            this.visioCheckBox.UseVisualStyleBackColor = true;
+            this.visioCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.visioCheckBox_MouseDown);
+            this.visioCheckBox.MouseEnter += new System.EventHandler(this.visioCheckBox_MouseEnter);
+            this.visioCheckBox.MouseLeave += new System.EventHandler(this.visioCheckBox_MouseLeave);
+            this.visioCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.visioCheckBox_MouseUp);
+            // 
+            // vscodeCheckBox
+            // 
+            this.vscodeCheckBox.AutoSize = true;
+            this.vscodeCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vscodeCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vscodeCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.vscode;
+            this.vscodeCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.vscodeCheckBox.Location = new System.Drawing.Point(156, 408);
+            this.vscodeCheckBox.Name = "vscodeCheckBox";
+            this.vscodeCheckBox.Size = new System.Drawing.Size(101, 24);
+            this.vscodeCheckBox.TabIndex = 29;
+            this.vscodeCheckBox.Text = "         VS Code  ";
+            this.vscodeCheckBox.UseVisualStyleBackColor = true;
+            this.vscodeCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.vscodeCheckBox_MouseDown);
+            this.vscodeCheckBox.MouseEnter += new System.EventHandler(this.vscodeCheckBox_MouseEnter);
+            this.vscodeCheckBox.MouseLeave += new System.EventHandler(this.vscodeCheckBox_MouseLeave);
+            this.vscodeCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.vscodeCheckBox_MouseUp);
+            // 
+            // winmergeCheckBox
+            // 
+            this.winmergeCheckBox.AutoSize = true;
+            this.winmergeCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.winmergeCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winmergeCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.winmerge;
+            this.winmergeCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.winmergeCheckBox.Location = new System.Drawing.Point(288, 78);
+            this.winmergeCheckBox.Name = "winmergeCheckBox";
+            this.winmergeCheckBox.Size = new System.Drawing.Size(114, 24);
+            this.winmergeCheckBox.TabIndex = 28;
+            this.winmergeCheckBox.Text = "         WinMerge  ";
+            this.winmergeCheckBox.UseVisualStyleBackColor = true;
+            this.winmergeCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.winmergeCheckBox_MouseDown);
+            this.winmergeCheckBox.MouseEnter += new System.EventHandler(this.winmergeCheckBox_MouseEnter);
+            this.winmergeCheckBox.MouseLeave += new System.EventHandler(this.winmergeCheckBox_MouseLeave);
+            this.winmergeCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.winmergeCheckBox_MouseUp);
+            // 
+            // toadCheckBox
+            // 
+            this.toadCheckBox.AutoSize = true;
+            this.toadCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toadCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toadCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.toad;
+            this.toadCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toadCheckBox.Location = new System.Drawing.Point(156, 288);
+            this.toadCheckBox.Name = "toadCheckBox";
+            this.toadCheckBox.Size = new System.Drawing.Size(81, 24);
+            this.toadCheckBox.TabIndex = 33;
+            this.toadCheckBox.Text = "         Toad  ";
+            this.toadCheckBox.UseVisualStyleBackColor = true;
+            this.toadCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toadCheckBox_MouseDown);
+            this.toadCheckBox.MouseEnter += new System.EventHandler(this.toadCheckBox_MouseEnter);
+            this.toadCheckBox.MouseLeave += new System.EventHandler(this.toadCheckBox_MouseLeave);
+            this.toadCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.toadCheckBox_MouseUp);
+            // 
+            // beyondCompareCheckBox
+            // 
+            this.beyondCompareCheckBox.AutoSize = true;
+            this.beyondCompareCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.beyondCompareCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beyondCompareCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.beyondcompare;
+            this.beyondCompareCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.beyondCompareCheckBox.Location = new System.Drawing.Point(0, 318);
+            this.beyondCompareCheckBox.Name = "beyondCompareCheckBox";
+            this.beyondCompareCheckBox.Size = new System.Drawing.Size(147, 24);
+            this.beyondCompareCheckBox.TabIndex = 20;
+            this.beyondCompareCheckBox.Text = "         Beyond Compare ";
+            this.beyondCompareCheckBox.UseVisualStyleBackColor = true;
+            this.beyondCompareCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.beyondCompareCheckBox_MouseDown);
+            this.beyondCompareCheckBox.MouseEnter += new System.EventHandler(this.beyondCompareCheckBox_MouseEnter);
+            this.beyondCompareCheckBox.MouseLeave += new System.EventHandler(this.beyondCompareCheckBox_MouseLeave);
+            this.beyondCompareCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.beyondCompareCheckBox_MouseUp);
+            // 
+            // autoHotkeyCheckBox
+            // 
+            this.autoHotkeyCheckBox.AutoSize = true;
+            this.autoHotkeyCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoHotkeyCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoHotkeyCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.autohotkey;
+            this.autoHotkeyCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.autoHotkeyCheckBox.Location = new System.Drawing.Point(0, 288);
+            this.autoHotkeyCheckBox.Name = "autoHotkeyCheckBox";
+            this.autoHotkeyCheckBox.Size = new System.Drawing.Size(126, 24);
+            this.autoHotkeyCheckBox.TabIndex = 19;
+            this.autoHotkeyCheckBox.Text = "         Auto HotKey  ";
+            this.autoHotkeyCheckBox.UseVisualStyleBackColor = true;
+            this.autoHotkeyCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.autoHotkeyCheckBox_MouseDown);
+            this.autoHotkeyCheckBox.MouseEnter += new System.EventHandler(this.autoHotkeyCheckBox_MouseEnter);
+            this.autoHotkeyCheckBox.MouseLeave += new System.EventHandler(this.autoHotkeyCheckBox_MouseLeave);
+            this.autoHotkeyCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.autoHotkeyCheckBox_MouseUp);
+            // 
+            // evernoteCheckBox
+            // 
+            this.evernoteCheckBox.AutoSize = true;
+            this.evernoteCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.evernoteCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.evernoteCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.evernote;
+            this.evernoteCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.evernoteCheckBox.Location = new System.Drawing.Point(0, 348);
+            this.evernoteCheckBox.Name = "evernoteCheckBox";
+            this.evernoteCheckBox.Size = new System.Drawing.Size(103, 24);
+            this.evernoteCheckBox.TabIndex = 18;
+            this.evernoteCheckBox.Text = "         Evernote ";
+            this.evernoteCheckBox.UseVisualStyleBackColor = true;
+            this.evernoteCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.evernoteCheckBox_MouseDown);
+            this.evernoteCheckBox.MouseEnter += new System.EventHandler(this.evernoteCheckBox_MouseEnter);
+            this.evernoteCheckBox.MouseLeave += new System.EventHandler(this.evernoteCheckBox_MouseLeave);
+            this.evernoteCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.evernoteCheckBox_MouseUp);
+            // 
+            // screenpressoCheckBox
+            // 
+            this.screenpressoCheckBox.AutoSize = true;
+            this.screenpressoCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.screenpressoCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.screenpressoCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.screenpresso;
+            this.screenpressoCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.screenpressoCheckBox.Location = new System.Drawing.Point(156, 78);
+            this.screenpressoCheckBox.Name = "screenpressoCheckBox";
+            this.screenpressoCheckBox.Size = new System.Drawing.Size(126, 24);
+            this.screenpressoCheckBox.TabIndex = 17;
+            this.screenpressoCheckBox.Text = "         ScreenPresso ";
+            this.screenpressoCheckBox.UseVisualStyleBackColor = true;
+            this.screenpressoCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.screenpressoCheckBox_MouseDown);
+            this.screenpressoCheckBox.MouseEnter += new System.EventHandler(this.screenpressoCheckBox_MouseEnter);
+            this.screenpressoCheckBox.MouseLeave += new System.EventHandler(this.screenpressoCheckBox_MouseLeave);
+            this.screenpressoCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.screenpressoCheckBox_MouseUp);
+            // 
+            // postmanCheckBox
+            // 
+            this.postmanCheckBox.AutoSize = true;
+            this.postmanCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.postmanCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postmanCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.postman;
+            this.postmanCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.postmanCheckBox.Location = new System.Drawing.Point(156, 48);
+            this.postmanCheckBox.Name = "postmanCheckBox";
+            this.postmanCheckBox.Size = new System.Drawing.Size(101, 24);
+            this.postmanCheckBox.TabIndex = 16;
+            this.postmanCheckBox.Text = "         Postman ";
+            this.postmanCheckBox.UseVisualStyleBackColor = true;
+            this.postmanCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.postmanCheckBox_MouseDown);
+            this.postmanCheckBox.MouseEnter += new System.EventHandler(this.postmanCheckBox_MouseEnter);
+            this.postmanCheckBox.MouseLeave += new System.EventHandler(this.postmanCheckBox_MouseLeave);
+            this.postmanCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.postmanCheckBox_MouseUp);
+            // 
+            // lightshotCheckBox
+            // 
+            this.lightshotCheckBox.AutoSize = true;
+            this.lightshotCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lightshotCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lightshotCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.lightshot;
+            this.lightshotCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lightshotCheckBox.Location = new System.Drawing.Point(0, 378);
+            this.lightshotCheckBox.Name = "lightshotCheckBox";
+            this.lightshotCheckBox.Size = new System.Drawing.Size(107, 24);
+            this.lightshotCheckBox.TabIndex = 15;
+            this.lightshotCheckBox.Text = "         Lightshot  ";
+            this.lightshotCheckBox.UseVisualStyleBackColor = true;
+            this.lightshotCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lightshotCheckBox_MouseDown);
+            this.lightshotCheckBox.MouseEnter += new System.EventHandler(this.lightshotCheckBox_MouseEnter);
+            this.lightshotCheckBox.MouseLeave += new System.EventHandler(this.lightshotCheckBox_MouseLeave);
+            this.lightshotCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lightshotCheckBox_MouseUp);
+            // 
+            // mailbirdCheckBox
+            // 
+            this.mailbirdCheckBox.AutoSize = true;
+            this.mailbirdCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mailbirdCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailbirdCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.mailbird;
+            this.mailbirdCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mailbirdCheckBox.Location = new System.Drawing.Point(0, 408);
+            this.mailbirdCheckBox.Name = "mailbirdCheckBox";
+            this.mailbirdCheckBox.Size = new System.Drawing.Size(101, 24);
+            this.mailbirdCheckBox.TabIndex = 14;
+            this.mailbirdCheckBox.Text = "         Mailbird  ";
+            this.mailbirdCheckBox.UseVisualStyleBackColor = true;
+            this.mailbirdCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mailbirdCheckBox_MouseDown);
+            this.mailbirdCheckBox.MouseEnter += new System.EventHandler(this.mailbirdCheckBox_MouseEnter);
+            this.mailbirdCheckBox.MouseLeave += new System.EventHandler(this.mailbirdCheckBox_MouseLeave);
+            this.mailbirdCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mailbirdCheckBox_MouseUp);
+            // 
+            // slackCheckBox
+            // 
+            this.slackCheckBox.AutoSize = true;
+            this.slackCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.slackCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slackCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.slack;
+            this.slackCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.slackCheckBox.Location = new System.Drawing.Point(156, 108);
+            this.slackCheckBox.Name = "slackCheckBox";
+            this.slackCheckBox.Size = new System.Drawing.Size(82, 24);
+            this.slackCheckBox.TabIndex = 13;
+            this.slackCheckBox.Text = "         Slack  ";
+            this.slackCheckBox.UseVisualStyleBackColor = true;
+            this.slackCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.slackCheckBox_MouseDown);
+            this.slackCheckBox.MouseEnter += new System.EventHandler(this.slackCheckBox_MouseEnter);
+            this.slackCheckBox.MouseLeave += new System.EventHandler(this.slackCheckBox_MouseLeave);
+            this.slackCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.slackCheckBox_MouseUp);
+            // 
+            // snagitCheckBox
+            // 
+            this.snagitCheckBox.AutoSize = true;
+            this.snagitCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.snagitCheckBox.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snagitCheckBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.snagit;
+            this.snagitCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.snagitCheckBox.Location = new System.Drawing.Point(156, 18);
+            this.snagitCheckBox.Name = "snagitCheckBox";
+            this.snagitCheckBox.Size = new System.Drawing.Size(89, 24);
+            this.snagitCheckBox.TabIndex = 12;
+            this.snagitCheckBox.Text = "         Snagit  ";
+            this.snagitCheckBox.UseVisualStyleBackColor = true;
+            this.snagitCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.snagitCheckBox_MouseDown);
+            this.snagitCheckBox.MouseEnter += new System.EventHandler(this.snagitCheckBox_MouseEnter);
+            this.snagitCheckBox.MouseLeave += new System.EventHandler(this.snagitCheckBox_MouseLeave);
+            this.snagitCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.snagitCheckBox_MouseUp);
             // 
             // winSCPCheckBox
             // 
@@ -416,7 +776,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // checkAllPictureBox
             // 
-            this.checkAllPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkAllPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkAllPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.checkAllPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.buttoncheckall;
             this.checkAllPictureBox.Location = new System.Drawing.Point(0, 841);
@@ -432,7 +792,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // installPictureBox
             // 
-            this.installPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.installPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.installPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.installPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.buttoninstall;
             this.installPictureBox.Location = new System.Drawing.Point(291, 841);
@@ -448,7 +808,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // uncheckAllPictureBox
             // 
-            this.uncheckAllPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uncheckAllPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uncheckAllPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.uncheckAllPictureBox.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.buttonuncheckall;
             this.uncheckAllPictureBox.Location = new System.Drawing.Point(129, 841);
@@ -461,286 +821,6 @@ namespace SAPSoftwareDeploymentInstaller
             this.uncheckAllPictureBox.MouseEnter += new System.EventHandler(this.uncheckAllPictureBox_MouseEnter);
             this.uncheckAllPictureBox.MouseLeave += new System.EventHandler(this.uncheckAllPictureBox_MouseLeave);
             this.uncheckAllPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.uncheckAllPictureBox_MouseUp);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox1.Location = new System.Drawing.Point(156, 18);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 24);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "         Snagit  ";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox2.Location = new System.Drawing.Point(156, 108);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(82, 24);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = "         Slack  ";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox3.Location = new System.Drawing.Point(0, 408);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(101, 24);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.Text = "         Mailbird  ";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox4.Location = new System.Drawing.Point(0, 378);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(107, 24);
-            this.checkBox4.TabIndex = 15;
-            this.checkBox4.Text = "         Lightshot  ";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox5.Location = new System.Drawing.Point(156, 48);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(101, 24);
-            this.checkBox5.TabIndex = 16;
-            this.checkBox5.Text = "         Postman ";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox6.Location = new System.Drawing.Point(156, 78);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(126, 24);
-            this.checkBox6.TabIndex = 17;
-            this.checkBox6.Text = "         ScreenPresso ";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox7.Location = new System.Drawing.Point(0, 348);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(103, 24);
-            this.checkBox7.TabIndex = 18;
-            this.checkBox7.Text = "         Evernote ";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox8.Location = new System.Drawing.Point(0, 288);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(126, 24);
-            this.checkBox8.TabIndex = 19;
-            this.checkBox8.Text = "         Auto HotKey  ";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox9.Location = new System.Drawing.Point(0, 318);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(147, 24);
-            this.checkBox9.TabIndex = 20;
-            this.checkBox9.Text = "         Beyond Compare ";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox17.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox17.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox17.Location = new System.Drawing.Point(288, 78);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(114, 24);
-            this.checkBox17.TabIndex = 28;
-            this.checkBox17.Text = "         WinMerge  ";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox18.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox18.Location = new System.Drawing.Point(156, 408);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(101, 24);
-            this.checkBox18.TabIndex = 29;
-            this.checkBox18.Text = "         VS Code  ";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox19.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox19.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox19.Location = new System.Drawing.Point(156, 378);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(82, 24);
-            this.checkBox19.TabIndex = 30;
-            this.checkBox19.Text = "         Visio  ";
-            this.checkBox19.UseVisualStyleBackColor = true;
-            // 
-            // checkBox20
-            // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox20.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox20.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox20.Location = new System.Drawing.Point(156, 348);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(86, 24);
-            this.checkBox20.TabIndex = 31;
-            this.checkBox20.Text = "         Trello  ";
-            this.checkBox20.UseVisualStyleBackColor = true;
-            // 
-            // checkBox21
-            // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox21.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox21.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox21.Location = new System.Drawing.Point(156, 318);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(95, 24);
-            this.checkBox21.TabIndex = 32;
-            this.checkBox21.Text = "         Tomcat  ";
-            this.checkBox21.UseVisualStyleBackColor = true;
-            // 
-            // checkBox22
-            // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox22.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox22.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox22.Location = new System.Drawing.Point(156, 288);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(81, 24);
-            this.checkBox22.TabIndex = 33;
-            this.checkBox22.Text = "         Toad  ";
-            this.checkBox22.UseVisualStyleBackColor = true;
-            // 
-            // checkBox23
-            // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox23.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox23.Location = new System.Drawing.Point(156, 258);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(99, 24);
-            this.checkBox23.TabIndex = 34;
-            this.checkBox23.Text = "         Textpad  ";
-            this.checkBox23.UseVisualStyleBackColor = true;
-            // 
-            // checkBox24
-            // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox24.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox24.Location = new System.Drawing.Point(156, 228);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(103, 24);
-            this.checkBox24.TabIndex = 35;
-            this.checkBox24.Text = "         Sublime   ";
-            this.checkBox24.UseVisualStyleBackColor = true;
-            // 
-            // checkBox25
-            // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox25.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox25.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox25.Location = new System.Drawing.Point(156, 198);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(96, 24);
-            this.checkBox25.TabIndex = 36;
-            this.checkBox25.Text = "         Soap UI  ";
-            this.checkBox25.UseVisualStyleBackColor = true;
-            // 
-            // checkBox26
-            // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox26.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox26.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox26.Location = new System.Drawing.Point(156, 168);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(91, 24);
-            this.checkBox26.TabIndex = 37;
-            this.checkBox26.Text = "         Oracle  ";
-            this.checkBox26.UseVisualStyleBackColor = true;
-            // 
-            // checkBox27
-            // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox27.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox27.Image = global::SAPSoftwareDeploymentInstaller.Properties.Resources.jaspersoft_studio_icon;
-            this.checkBox27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox27.Location = new System.Drawing.Point(156, 138);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(97, 24);
-            this.checkBox27.TabIndex = 38;
-            this.checkBox27.Text = "         Chrome ";
-            this.checkBox27.UseVisualStyleBackColor = true;
             // 
             // SAPSoftwareDeploymentInstaller
             // 
@@ -806,26 +886,26 @@ namespace SAPSoftwareDeploymentInstaller
         private System.Windows.Forms.PictureBox checkAllPictureBox;
         private System.Windows.Forms.PictureBox installPictureBox;
         private System.Windows.Forms.PictureBox uncheckAllPictureBox;
-        private System.Windows.Forms.CheckBox checkBox27;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.CheckBox checkBox24;
-        private System.Windows.Forms.CheckBox checkBox25;
-        private System.Windows.Forms.CheckBox checkBox26;
+        private System.Windows.Forms.CheckBox chromeCheckBox;
+        private System.Windows.Forms.CheckBox beyondCompareCheckBox;
+        private System.Windows.Forms.CheckBox autoHotkeyCheckBox;
+        private System.Windows.Forms.CheckBox evernoteCheckBox;
+        private System.Windows.Forms.CheckBox screenpressoCheckBox;
+        private System.Windows.Forms.CheckBox postmanCheckBox;
+        private System.Windows.Forms.CheckBox lightshotCheckBox;
+        private System.Windows.Forms.CheckBox mailbirdCheckBox;
+        private System.Windows.Forms.CheckBox slackCheckBox;
+        private System.Windows.Forms.CheckBox snagitCheckBox;
+        private System.Windows.Forms.CheckBox winmergeCheckBox;
+        private System.Windows.Forms.CheckBox vscodeCheckBox;
+        private System.Windows.Forms.CheckBox visioCheckBox;
+        private System.Windows.Forms.CheckBox trelloCheckBox;
+        private System.Windows.Forms.CheckBox tomcatCheckBox;
+        private System.Windows.Forms.CheckBox toadCheckBox;
+        private System.Windows.Forms.CheckBox textpadCheckBox;
+        private System.Windows.Forms.CheckBox sublimeCheckBox;
+        private System.Windows.Forms.CheckBox soapCheckBox;
+        private System.Windows.Forms.CheckBox oracleCheckBox;
     }
 }
 

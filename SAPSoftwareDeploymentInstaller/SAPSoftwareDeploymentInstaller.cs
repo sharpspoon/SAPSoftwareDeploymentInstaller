@@ -1050,6 +1050,406 @@ namespace SAPSoftwareDeploymentInstaller
         {
             this.winSCPCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
+
+        private void autoHotkeyCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void autoHotkeyCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void autoHotkeyCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void autoHotkeyCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void beyondCompareCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void beyondCompareCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beyondCompareCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void beyondCompareCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void evernoteCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void evernoteCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void evernoteCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void evernoteCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void lightshotCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void lightshotCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lightshotCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lightshotCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void mailbirdCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void mailbirdCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mailbirdCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mailbirdCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void snagitCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void snagitCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void snagitCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void snagitCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void postmanCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void postmanCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void postmanCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void postmanCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void screenpressoCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void screenpressoCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void screenpressoCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void screenpressoCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void slackCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void slackCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void slackCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void slackCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void chromeCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void chromeCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chromeCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chromeCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void oracleCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void oracleCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void oracleCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void oracleCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void soapCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void soapCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void soapCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void soapCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void sublimeCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void sublimeCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sublimeCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sublimeCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void textpadCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void textpadCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textpadCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textpadCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void toadCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void toadCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toadCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toadCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void tomcatCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void tomcatCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tomcatCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tomcatCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void trelloCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void trelloCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trelloCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trelloCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void visioCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void visioCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void visioCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void visioCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void vscodeCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void vscodeCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vscodeCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vscodeCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void winmergeCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void winmergeCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void winmergeCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void winmergeCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
 
