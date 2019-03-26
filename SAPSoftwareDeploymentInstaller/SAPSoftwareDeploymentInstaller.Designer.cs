@@ -154,6 +154,10 @@ namespace SAPSoftwareDeploymentInstaller
             this.winSCPCheckBox.TabIndex = 11;
             this.winSCPCheckBox.Text = "         WinSCP                   ";
             this.winSCPCheckBox.UseVisualStyleBackColor = true;
+            this.winSCPCheckBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.winSCPCheckBox_MouseDown);
+            this.winSCPCheckBox.MouseEnter += new System.EventHandler(this.winSCPCheckBox_MouseEnter);
+            this.winSCPCheckBox.MouseLeave += new System.EventHandler(this.winSCPCheckBox_MouseLeave);
+            this.winSCPCheckBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.winSCPCheckBox_MouseUp);
             // 
             // puttyCheckBox
             // 
@@ -370,6 +374,7 @@ namespace SAPSoftwareDeploymentInstaller
             // 
             // versionLabel
             // 
+            this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.versionLabel.AutoSize = true;
             this.versionLabel.BackColor = System.Drawing.Color.Transparent;
             this.versionLabel.Location = new System.Drawing.Point(746, 589);

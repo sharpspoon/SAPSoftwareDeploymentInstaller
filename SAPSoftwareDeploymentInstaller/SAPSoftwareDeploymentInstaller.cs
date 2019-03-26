@@ -21,167 +21,6 @@ namespace SAPSoftwareDeploymentInstaller
         }
 
         //global stuff
-
-        private void iReport451CheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            //this.iReport451CheckBox.ForeColor = Color.Green;
-            this.iReport451CheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void iReport451CheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-        private void iReport451CheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.iReport451CheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void iReport451CheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void jaspersoftStudioCheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void jaspersoftStudioCheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void jaspersoftStudioCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void jaspersoftStudioCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void nPlusPlusCheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            this.nPlusPlusCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void nPlusPlusCheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void nPlusPlusCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.nPlusPlusCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void nPlusPlusCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void virtualBoxCheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            this.virtualBoxCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void virtualBoxCheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void virtualBoxCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.virtualBoxCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void virtualBoxCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void sevenZipCheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            this.sevenZipCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void sevenZipCheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void sevenZipCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.sevenZipCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void sevenZipCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void greenshotCheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            this.greenshotCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void greenshotCheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void greenshotCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.greenshotCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void greenshotCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void filezillaCheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            this.filezillaCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void filezillaCheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void filezillaCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.filezillaCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void filezillaCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void puttyCheckBox_MouseEnter(object sender, EventArgs e)
-        {
-            this.puttyCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
-        }
-
-        private void puttyCheckBox_MouseLeave(object sender, EventArgs e)
-        {
-            this.puttyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
-        private void puttyCheckBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.puttyCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
-        }
-
-        private void puttyCheckBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.puttyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
-        }
-
         string user = Environment.UserName;
         string userDir = @"C:\Users\" + Environment.UserName + @"\SAPSDITemp";
         string sevenZipInstaller = "7z1900-x64.exe";
@@ -193,36 +32,12 @@ namespace SAPSoftwareDeploymentInstaller
         string winscpInstaller = "WinSCP-5.13.9-Setup.exe";
         
 
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void sapLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://sap.com");
-        }
-
-        private void SAPSoftwareDeploymentInstaller_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                DialogResult result = MessageBox.Show("Do you really want to exit?", "SAP Software Deployment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    Environment.Exit(0);
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
-        }
 
         private void installButton_Click(object sender, EventArgs e)
         {
             //check if any software is selected
-            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false && jaspersoftStudioCheckBox.Checked == false && greenshotCheckBox.Checked == false && filezillaCheckBox.Checked == false && puttyCheckBox.Checked == false)
+            if (iReport451CheckBox.Checked == false && sevenZipCheckBox.Checked == false && nPlusPlusCheckBox.Checked == false && virtualBoxCheckBox.Checked == false && jaspersoftStudioCheckBox.Checked == false && greenshotCheckBox.Checked == false && filezillaCheckBox.Checked == false && puttyCheckBox.Checked == false && winSCPCheckBox.Checked == false)
             {
                 MessageBox.Show("Must select at least one program to install.", "SAP Software Deployment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -233,11 +48,7 @@ namespace SAPSoftwareDeploymentInstaller
                 MessageBox.Show("Process is currently running!", "SAP Software Deployment", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-
-            //get os bit version
-            bool sixtyFourBitOperatingSystem = System.Environment.Is64BitOperatingSystem;
-
+            
             //clear contents after each run
             installLogRichTextBox.Clear();
             dataGridView1.Rows.Clear();
@@ -320,6 +131,14 @@ namespace SAPSoftwareDeploymentInstaller
             if (puttyCheckBox.Checked == true)
             {
                 dataGridView1.Rows.Add("PuTTY", Resources.filedownload);
+            }
+
+            /////////////////
+            //WINSCP/////////
+            /////////////////
+            if (winSCPCheckBox.Checked == true)
+            {
+                dataGridView1.Rows.Add("WinSCP", Resources.filedownload);
             }
 
             //////////////////////////////////
@@ -514,6 +333,26 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadFileCompleted += DownloadCompleted9;
                 }
             }
+
+            /////////////////
+            //WINSCP/////////
+            /////////////////
+            if (winSCPCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/winscp/" + winscpInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + winscpInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted9;
+                }
+            }
             //System.IO.Directory.Delete(userDir);
         }
 
@@ -522,6 +361,9 @@ namespace SAPSoftwareDeploymentInstaller
             progressBar1.Value = e.ProgressPercentage;
         }
 
+        /////////////////
+        //IREPORT////////
+        /////////////////
         private void DownloadCompleted(object sender, AsyncCompletedEventArgs e)
         {
             string startPath = userDir + @"/zip";
@@ -835,6 +677,47 @@ namespace SAPSoftwareDeploymentInstaller
             }
         }
 
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted10(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + puttyInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "PuTTY")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder10();
+                }
+            }
+        }
+        private void ProcessFolder10()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "putty*.msi").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "putty*.msi*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"/qn";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + puttyInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //DEPLOYAPPS/////
+        /////////////////
         public static void DeployApplications(string executableFilePath, string fileName, string argumentList)
         {
             PowerShell powerShell = null;
@@ -873,6 +756,32 @@ namespace SAPSoftwareDeploymentInstaller
             {
                 if (powerShell != null)
                     powerShell.Dispose();
+            }
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void sapLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://sap.com");
+        }
+
+        private void SAPSoftwareDeploymentInstaller_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Do you really want to exit?", "SAP Software Deployment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
 
@@ -960,6 +869,186 @@ namespace SAPSoftwareDeploymentInstaller
             filezillaCheckBox.Checked = false;
             puttyCheckBox.Checked = false;
             winSCPCheckBox.Checked = false;
+        }
+
+        private void iReport451CheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            //this.iReport451CheckBox.ForeColor = Color.Green;
+            this.iReport451CheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void iReport451CheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+        private void iReport451CheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void iReport451CheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.iReport451CheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void jaspersoftStudioCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.jaspersoftStudioCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void nPlusPlusCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.nPlusPlusCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void virtualBoxCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.virtualBoxCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void sevenZipCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.sevenZipCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void greenshotCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.greenshotCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void filezillaCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.filezillaCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void puttyCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.puttyCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void winSCPCheckBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.winSCPCheckBox.Font = new Font("Calibri", 8, FontStyle.Bold);
+        }
+
+        private void winSCPCheckBox_MouseEnter(object sender, EventArgs e)
+        {
+            this.winSCPCheckBox.Font = new Font("Calibri", 11, FontStyle.Bold);
+        }
+
+        private void winSCPCheckBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.winSCPCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
+        }
+
+        private void winSCPCheckBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.winSCPCheckBox.Font = new Font("Calibri", 9, FontStyle.Bold);
         }
     }
 }
