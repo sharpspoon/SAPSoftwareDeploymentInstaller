@@ -30,7 +30,28 @@ namespace SAPSoftwareDeploymentInstaller
         string greenshotInstaller = "Greenshot-INSTALLER-1.2.10.6-RELEASE.exe";
         string puttyInstaller = "putty-64bit-0.71-installer.msi";
         string winscpInstaller = "WinSCP-5.13.9-Setup.exe";
-        
+        string autoHotkeyInstaller = "AutoHotkey_1.1.30.01.zip";
+        string beyondCompareInstaller = "BCompare-4.2.9.23626.exe";
+        string evernoteInstaller = "Evernote_6.17.6.8292.exe";
+        string lightshotInstaller = "setup-lightshot.exe";
+        string mailbirdInstaller = "MailbirdInstaller.exe";
+        string snagitInstaller = "snagit.exe";
+        string postmanInstaller = "Postman-win64-7.0.6-Setup.exe";
+        string screenpressoInstaller = "Screenpresso.exe";
+        string slackInstaller = "SlackSetup.exe";
+        string chromeInstaller = "ChromeSetup.exe";
+        string oracleInstaller = "";
+        string soapInstaller = "SoapUI-x32-5.5.0.exe";
+        string sublimeInstaller = "Sublime Text Build 3200 x64 Setup.exe";
+        string textpadInstaller = "txpeng812-64.zip";
+        string toadInstaller = "";
+        string tomcatInstaller = "";
+        string trelloInstaller = "";
+        string visioInstaller = "";
+        string vscodeInstaller = "";
+        string winmergeInstaller = "WinMerge-2.16.0-Setup.exe";
+
+
 
 
 
@@ -541,7 +562,407 @@ namespace SAPSoftwareDeploymentInstaller
                     wc.DownloadFileCompleted += DownloadCompleted10;
                 }
             }
-            //System.IO.Directory.Delete(userDir);
+
+
+            /////////////////
+            //AUTOHOTKEY/////
+            /////////////////
+            if (autoHotkeyCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + autoHotkeyInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/autohotkey/" + autoHotkeyInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + autoHotkeyInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted11;
+                }
+            }
+
+            /////////////////
+            //BEYONDCOMPARE//
+            /////////////////
+            if (beyondCompareCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + beyondCompareInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/beyondcompare/" + beyondCompareInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + autoHotkeyInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted12;
+                }
+            }
+
+            /////////////////
+            //EVERNOTE///////
+            /////////////////
+            if (evernoteCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + evernoteInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/evernote/" + evernoteInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + evernoteInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted13;
+                }
+            }
+
+            /////////////////
+            //LIGHTSHOT//////
+            /////////////////
+            if (lightshotCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + lightshotInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/lightshot/" + lightshotInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + lightshotInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted14;
+                }
+            }
+
+            /////////////////
+            //MAILBIRD///////
+            /////////////////
+            if (mailbirdCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + mailbirdInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/mailbird/" + mailbirdInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + mailbirdInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted15;
+                }
+            }
+
+            /////////////////
+            //SNAGIT/////////
+            /////////////////
+            if (snagitCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + snagitInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/snagit/" + snagitInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + snagitInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted16;
+                }
+            }
+
+            /////////////////
+            //POSTMAN////////
+            /////////////////
+            if (postmanCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + postmanInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/postman/" + postmanInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + postmanInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted17;
+                }
+            }
+
+            /////////////////
+            //SCREENPRESSO///
+            /////////////////
+            if (screenpressoCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + screenpressoInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/screenpresso/" + screenpressoInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + screenpressoInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted18;
+                }
+            }
+
+            /////////////////
+            //SLACK//////////
+            /////////////////
+            if (slackCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + slackInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/slack/" + slackInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + slackInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted19;
+                }
+            }
+
+            /////////////////
+            //CHROME/////////
+            /////////////////
+            if (chromeCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + chromeInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/chrome/" + chromeInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + chromeInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted20;
+                }
+            }
+
+            /////////////////
+            //ORACLE/////////
+            /////////////////
+            if (oracleCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + oracleInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/oracle/" + oracleInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + oracleInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted21;
+                }
+            }
+
+            /////////////////
+            //SOAP///////////
+            /////////////////
+            if (soapCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + soapInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/soap/" + soapInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + soapInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted22;
+                }
+            }
+
+            /////////////////
+            //SUBLIME////////
+            /////////////////
+            if (sublimeCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + sublimeInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/sublime/" + sublimeInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + sublimeInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted23;
+                }
+            }
+
+            /////////////////
+            //TEXTPAD////////
+            /////////////////
+            if (textpadCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + textpadInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/textpad/" + textpadInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + textpadInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted24;
+                }
+            }
+
+            /////////////////
+            //TOAD///////////
+            /////////////////
+            if (toadCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + toadInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/toad/" + toadInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + toadInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted25;
+                }
+            }
+
+            /////////////////
+            //TOMCAT/////////
+            /////////////////
+            if (tomcatCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + tomcatInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/tomcat/" + tomcatInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + tomcatInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted26;
+                }
+            }
+
+            /////////////////
+            //TRELLO/////////
+            /////////////////
+            if (trelloCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + trelloInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/trello/" + trelloInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + trelloInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted27;
+                }
+            }
+
+            /////////////////
+            //VISIO//////////
+            /////////////////
+            if (visioCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + visioInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/visio/" + visioInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + visioInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted28;
+                }
+            }
+
+            /////////////////
+            //VSCODE/////////
+            /////////////////
+            if (vscodeCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + vscodeInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/vscode/" + vscodeInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + vscodeInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted29;
+                }
+            }
+
+            /////////////////
+            //WINMERGE///////
+            /////////////////
+            if (winmergeCheckBox.Checked == true)
+            {
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winmergeInstaller + " ....");
+
+                using (WebClient wc = new WebClient())
+                {
+                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                    wc.DownloadFileAsync(
+                        // Param1 = Link of file
+                        new System.Uri("https://wardr.net/sapsdi/winmerge/" + winmergeInstaller),
+                        // Param2 = Path to save
+                        userDir + @"\" + winmergeInstaller
+                    );
+                    wc.DownloadFileCompleted += DownloadCompleted30;
+                }
+            }
         }
 
         void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -904,6 +1325,766 @@ namespace SAPSoftwareDeploymentInstaller
         }
 
         /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted11(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder11();
+                }
+            }
+        }
+        private void ProcessFolder11()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted12(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder12();
+                }
+            }
+        }
+        private void ProcessFolder12()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted13(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder13();
+                }
+            }
+        }
+        private void ProcessFolder13()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted14(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder14();
+                }
+            }
+        }
+        private void ProcessFolder14()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted15(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder15();
+                }
+            }
+        }
+        private void ProcessFolder15()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted16(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder16();
+                }
+            }
+        }
+        private void ProcessFolder16()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted17(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder17();
+                }
+            }
+        }
+        private void ProcessFolder17()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted18(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder18();
+                }
+            }
+        }
+        private void ProcessFolder18()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted19(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder19();
+                }
+            }
+        }
+        private void ProcessFolder19()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted20(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder20();
+                }
+            }
+        }
+        private void ProcessFolder20()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted21(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder21();
+                }
+            }
+        }
+        private void ProcessFolder21()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted22(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder22();
+                }
+            }
+        }
+        private void ProcessFolder22()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted23(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder23();
+                }
+            }
+        }
+        private void ProcessFolder23()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted24(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder24();
+                }
+            }
+        }
+        private void ProcessFolder24()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted25(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder25();
+                }
+            }
+        }
+        private void ProcessFolder25()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted26(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder26();
+                }
+            }
+        }
+        private void ProcessFolder26()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted27(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder27();
+                }
+            }
+        }
+        private void ProcessFolder27()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted28(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder28();
+                }
+            }
+        }
+        private void ProcessFolder28()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted29(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder29();
+                }
+            }
+        }
+        private void ProcessFolder29()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
+        //WINSCP/////////
+        /////////////////
+        private void DownloadCompleted30(object sender, AsyncCompletedEventArgs e)
+        {
+            installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Downloading " + winscpInstaller + " ....Done.");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[0].Value.ToString() == "WinSCP")
+                {
+                    row.Cells[1].Value = Resources.checkgreen;
+                    ProcessFolder30();
+                }
+            }
+        }
+        private void ProcessFolder30()
+        {
+            //install temp user directory
+            var user = Environment.UserName;
+            var userDir = @"C:\Users\" + user + @"\SAPSDITemp";
+
+            if (Directory.GetFiles(userDir, "WinSCP*.exe").Length > 0)
+            {
+                //int count = Directory.GetFiles(userDir, "*.*").Length;
+                string[] files = Directory.GetFiles(userDir, "WinSCP*.exe*");
+
+                foreach (var file in files)
+                {
+                    var fileName = System.IO.Path.GetFileName(file);
+                    var fileNameWithPath = userDir + "\\" + fileName;
+                    var argumentList = @"'/VERYSILENT /NOREBOOT'";
+                    //Deploy application  
+                    DeployApplications(fileNameWithPath, fileName, argumentList);
+                }
+                installLogRichTextBox.Text = installLogRichTextBox.Text.Insert(0, Environment.NewLine + DateTime.Now + ">>>   Installing " + winscpInstaller + " ....Done.");
+            }
+        }
+
+        /////////////////
         //DEPLOYAPPS/////
         /////////////////
         public static void DeployApplications(string executableFilePath, string fileName, string argumentList)
@@ -967,7 +2148,15 @@ namespace SAPSoftwareDeploymentInstaller
                 DialogResult result = MessageBox.Show("Do you really want to exit?", "SAP Software Deployment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    Environment.Exit(0);
+                    try
+                    {
+                        Directory.Delete(userDir, true);
+                        Environment.Exit(0);
+                    }
+                    catch
+                    {
+                        Environment.Exit(0);
+                    }
                 }
                 else
                 {
@@ -1683,4 +2872,3 @@ namespace SAPSoftwareDeploymentInstaller
         }
     }
 }
-
